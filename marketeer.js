@@ -48,15 +48,23 @@ window.onclick = function(event){
 // tab change functions
 const btns = document.querySelectorAll(".tabButtons");
 const tabs = document.querySelectorAll(".tabs");
+const tabButtonWrapper = document.getElementById("tabButton");
 
 btns.forEach(btn => {
     btn.addEventListener("click", () => {
-        btns.forEach(button => button.classList.remove("active"))
-        btn.classList.add("active")
+        // Remove active class from all buttons and tabs
+        btns.forEach(button => button.classList.remove("active"));
+        tabs.forEach(tab => tab.classList.remove("active"));
 
-        tabs.forEach(tab => tab.classList.remove("active"))
-        const tabId = btn.getAttribute("data-tab")
+        // Add active class to clicked button and corresponding tab
+        btn.classList.add("active");
+        const tabId = btn.getAttribute("data-tab");
+        document.getElementById(tabId).classList.add("active");
 
-        document.getElementById(tabId).classList.add("active")
-    })
+        // Remove previous color class and add the correct one
+        tabButtonWrapper.classList.remove("service", "impact", "sustain");
+        if (tabId === "tab1") tabButtonWrapper.classList.add("service");
+        if (tabId === "tab2") tabButtonWrapper.classList.add("impact");
+        if (tabId === "tab3") tabButtonWrapper.classList.add("sustain");
+    });
 });

@@ -316,12 +316,14 @@ footer a {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: 30px;
-    background-color: white;
+    /* gap: 30px; */
+    background-color: pink;
+    height: 1000px;
     min-height: 1000px;
     width: 70%;
     /* z-index: -999px; */
     position: relative;
+    border: 1px solid red;
 }
 
 #tabButton {
@@ -369,6 +371,20 @@ h4 {
     /* left: -90px; */
 }
 
+
+.service{
+    --active: 255, 0 , 0;
+}
+
+.impact{
+    --active: 0, 128, 0;
+}
+
+.sustain{
+    --active: 0 , 0, 255;
+}
+
+
 .tabs {
     display: none;
 }
@@ -379,22 +395,37 @@ h4 {
 }
 
 .tabButtons.active {
-    background-color: white;
+    background-color: rgb(var(--active));
     color: black;
 }
 
 #tab1 {
-    background-color: white;
+    background-color: red;
+    width: 100%;
+    height: inherit;
+}
+
+#tab1.active{
+    background-color: red;
 }
 
 #tab2 {
-    background-color: white;
+    background-color: green;
+    width: 100%;
+    height: inherit;
 }
 
 #tab3 {
-    background-color: white;
+    background-color: blue;
+    width: 100%;
+    height: inherit;
 }
 
+.dot{
+    width: 100%;
+    height: 100%;
+
+}
 /* The Modal (background) */
 #modalSign {
     display: none;
