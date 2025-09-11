@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="KOsi and Patrick">
+    <meta name="author" content="kosi">
+    <title>Marketeer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="marketeer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span class="mainnav">
+                <div class="dropdown">
+                    <a href="#">Home</a>
+                    <div class="dropdown-content">
+                        <a href="#underhero">Overview</a>
+                        <a href="#tabSection">Why Us</a>
+                        <a href="#cards">Blog</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="">Store</a>
+                    <div class="dropdown-content">
+                        <a href="">Recommended for you</a>
+                        <a href=""> Our Partners</a>
+                        <a href=""></a>
+                    </div>
+                </div>
+                <a href="">Categories</a>
+                <a href="">Brand Outlet</a>
+            </span>
+
+            <div class="search-container">
+                <input type="search" name="search" placeholder="Search" id="searchbar">
+                <button id="search-button">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <span class="nav2">
+                <button class="user" onclick="openSignIn()"><i class="fa fa-user" aria-hidden="true"></i></button>
+                <div id="signIn">
+                    <div class="signInModal">
+                        <span class="close" onclick="closeSignIn()">&times;</span>
+                        <center>
+                            <p class="formHead">Sign in to your account</p>
+                        </center>
+                        <form action="" method="get">
+                            <label for="email">Email</label><br>
+                            <input type="email" class="inputForm" required><br>
+                            <label for="password">Password</label><br>
+                            <input type="password" class="inputForm" required><br>
+                            <div class="inputBtns">
+                                <button type="submit" class="inputBtn">Sign In</button>
+                                <button type="reset" class="inputBtn">Forgot Password</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </span>
+        </nav>
+
+    </header>
+
+
+    <main>
+        <div id="body">
+            <hr>
+            <h2 class="title">Nigeria's Leading E-Commerce Platform</h2>
+            <div class="hero">
+                <div>
+                    <div>
+                        <h1 class="feat">Empower</h1>
+                        <h1 class="feat">Connect</h1>
+                        <h1 class="feat">Grow</h1>
+                    </div>
+                    <h3 class="slogan">100% Nigeria, 100% Internet</h3>
+                    <button class="genBtn" onclick="openModal()">Sign Up</button>
+                    <div id="modalSign">
+                        <div class="modalForm">
+                            <span onclick="closeModal()" class="close">&times;</span>
+                            <center>
+                                <p class="formHead">Create an Account</p>
+                            </center>
+                            <form action="" method="get">
+                                <label for="">Name</label><br>
+                                <input type="text" class="inputForm" required><br>
+                                <label for="">Email</label><br>
+                                <input type="email" class="inputForm" required><br>
+                                <label for="">Country</label><br>
+                                <input type="text" class="inputForm" required><br>
+                                <label for="">Address</label><br>
+                                <textarea name="" id="formAddress" rows="5" required></textarea><br>
+                                <label for="">Password</label><br>
+                                <input type="password" class="inputForm" required><br>
+                                <label for="">Confirm Password</label><br>
+                                <input type="password" class="inputForm" required><br>
+                                <button type="submit" class="inputBtn">Enter</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-thumbnail">
+                    <img src="https://cdn.pixabay.com/photo/2017/10/29/17/31/online-2900303_640.jpg" alt=""
+                        class="thumbnail" onclick="openVideo()">
+                    <img src="https://www.freepnglogos.com/uploads/play-button-png/index-media-cover-art-play-button-overlay-5.png"
+                        alt="" class="play-button" onclick="openVideo()">
+                </div>
+                <div id="videoModal" class="modal">
+                    <!-- the class is for styling and the id is for js -->
+                    <span class="close" onclick="closeVideo()">&times;</span>
+                    <video src="https://group-live.jumia.is/videos/special/homepage.mp4" id="fullVideo">Your browser
+                        doesn't
+                        support this
+                        video format</video>
+                </div>
+            </div>
+            <div id="underhero">
+                <div id="imgunderhero">
+                    <img src="https://www.pngall.com/wp-content/uploads/5/Online-Payment-PNG-Image-HD.png" alt=""
+                        class="imgunderhero">
+                </div>
+                <div id="bodyunderhero">
+                    <h2>A Digital Nigeria</h2><br>
+                    <p id="textunderhero">We are the leading pan-African e-commerce platform active across 9 countries
+                        in the continent. Our
+                        platform
+                        consists of a marketplace connecting thousands of sellers to millions of consumers, with
+                        integrated
+                        logistics and digital payment services.
+                        Community ect, Build
+                        At the heart of our success is a group of entrepreneurs who are passionate about Africa and its
+                        digital
+                        transformation.</p>
+                    <button class="genBtn">People</button>
+                </div>
+            </div>
+
+            <div id="tabSection">
+                <div id="topTabSection">
+                    <h4>Why US?</h4>
+                    <div id="tabButton">
+                        <button data-tab="tab1" class="tabButtons active">Our Services</button>
+                        <button data-tab="tab2" class="tabButtons">Our Impact</button>
+                        <button data-tab="tab3" class="tabButtons">Sustainability</button>
+                    </div>
+                </div>
+
+                <div class="dot">
+                    <div class="tabs active" id="tab1">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ab deserunt repellat
+                            consequuntur
+                            totam expedita accusantium voluptatem omnis molestiae, officiis dicta quam possimus beatae
+                            impedit quasi magni sapiente doloribus tenetur sint quas eligendi similique error est vel?
+                            Dignissimos illum molestiae iusto ut nisi facere laboriosam vitae optio sapiente, libero
+                            odio?
+                        </p>
+                    </div>
+                    <div class="tabs" id="tab2">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur ea suscipit ab quod
+                            maiores
+                            quam officia praesentium enim esse odit!</p>
+                    </div>
+                    <div class="tabs" id="tab3">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eaque placeat exercitationem
+                            quis
+                            suscipit distinctio cum, debitis deleniti, eum corporis voluptate obcaecati voluptatum
+                            repellat
+                            vitae repellendus aliquid aspernatur recusandae non quia nulla neque doloremque omnis
+                            veritatis!
+                            Libero deleniti cum reiciendis velit eum id labore ad aspernatur fuga officia, impedit dicta
+                            quos dolores, tenetur voluptate ratione. Iure dolorem corporis vero autem iusto iste
+                            obcaecati
+                            hic veniam consequuntur maxime nihil, fuga itaque impedit nobis, quasi cupiditate
+                            repellendus
+                            saepe eius eum! Vitae nesciunt sint magnam a illo odio, architecto molestiae enim magni
+                            impedit
+                            cumque libero ipsa deleniti provident odit illum delectus nostrum excepturi itaque beatae
+                            reiciendis voluptate eveniet. Voluptas minus deleniti, iusto, mollitia labore perspiciatis
+                            distinctio pariatur at, doloremque nemo suscipit dignissimos cupiditate atque neque saepe
+                            ullam
+                            eius sint inventore veritatis repellendus quis! Veniam architecto dolorem assumenda placeat
+                            iste
+                            incidunt voluptates aut exercitationem. Natus nobis minima quaerat nam aliquid? Expedita
+                            similique delectus unde ullam eius, commodi corporis perferendis! Dolorem obcaecati
+                            provident
+                            nulla repellendus ducimus, deserunt accusantium. Enim reprehenderit nulla consectetur ab
+                            quaerat. Alias ipsum itaque sed nemo sapiente, mollitia aspernatur quas harum praesentium
+                            nobis
+                            vitae veritatis ut numquam repellat quidem dignissimos dicta illo temporibus rem quaerat hic
+                            officiis. Assumenda saepe magnam quam laboriosam?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <h2>Our Latest News</h2>
+            <div id="cards">
+                <div class="card"><a href="">
+                        <h3>Marketeer's Technologies: Everyone wants to integrate the APIs</h3>
+                        <p>August 11, 2025 | Company News</p>
+                    </a></div>
+                <div class="card"><a href="">
+                        <h3>Exclusive: Marketeer is projected to sell for $250 Billion!</h3>
+                        <p>September 1, 2025 | Company News</p>
+                    </a></div>
+                <div class="card"><a href="">
+                        <h3>Breaking: Marketeer acquires Konga</h3>
+                        <p>September 2, 2025 | Company News</p>
+                    </a></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="">Contact Us</a>
+        <p>Copyright &copy; Marketeer, 2025</p>
+    </footer>
+
+    <script src="marketeer.js"></script>
+
+</body>
+
+</html>
