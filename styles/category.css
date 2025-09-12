@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -42,7 +44,7 @@ html {
 body {
   font-family: "Raleway", sans-serif;
   min-width: 100%;
-  background-color: var(--LINK-COLORDARK);
+  background-color: aquamarine;
   /*min-height: 100vh;*/
   /*background-repeat: no-repeat;*/
   background-size: cover;
@@ -62,8 +64,136 @@ h3 {
   letter-spacing: 0.05em;
 }
 
-.header {
-  /* background-color: blueviolet;*/
+nav {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* top: 0;*/
+  /* z-index: 1000;*/
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.mainnav {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 30%;
+  gap: 2%;
+}
+
+.nav2 {
+  display: inline-flex;
+  float: right;
+  justify-content: flex-end;
+  width: 15%;
+  gap: 50%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* position below the link */
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  border-radius: 4px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover a {
+  color: rgb(32, 32, 189);
+}
+
+.search-container {
+  display: flex;
+  position: relative;
+  width: 45%;
+}
+#searchbar {
+  width: 100%;
+  padding: 10px 40px 10px 25px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgb(107, 107, 107);
+  font-size: 15px;
+}
+
+#search-button {
+  position: absolute;
+  background: transparent;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  border: none;
+  color: rgb(163, 160, 160);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  align-self: center;
+  width: 50px;
+  height: 5px;
+  background-color: rgb(40, 40, 211);
+  border-radius: 100px;
+  border: none;
+}
+
+.title {
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.feat {
+  font-weight: 100;
+  font-size: 75px;
+}
+
+.slogan {
+  font-weight: 300;
+  margin: 15px 0px 15px 0px;
+  font-size: 25px;
+}
+
+/*.header {
   width: 100%;
   height: 45px;
   border-bottom: 1px solid #000;
@@ -105,7 +235,6 @@ h3 {
 }
 
 .searchbar {
-  /* margin: 0.5rem;*/
   margin-bottom: 0;
   background-color: aliceblue;
   display: flex;
@@ -126,8 +255,8 @@ input {
   background: none;
   font-size: 14px;
 }
-
-ion-icon {
+*/
+/*ion-icon {
   width: 50px;
   height: 40px;
   cursor: pointer;
@@ -135,7 +264,6 @@ ion-icon {
 
 .head-pic {
   display: flex;
-  /*  height: 50px;*/
 }
 
 .header__logo {
@@ -164,7 +292,6 @@ ion-icon {
   border: 1px solid #000;
   padding: 10px;
   background-color: rgb(177, 98, 225);
-  /*background-image: linear-gradient(to right, steelblue 60%, blueviolet);*/
   color: #fff;
   border-radius: 20px;
   border-top-right-radius: 0px;
@@ -179,16 +306,18 @@ ion-icon {
   border-radius: 20px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
-}
+}*/
 
 .mainpanel {
-  margin: 0 auto;
+  margin: 81px auto;
   position: relative;
-  max-width: 85%;
+  max-width: 95%;
 }
 
 .slider {
   border-radius: 15px;
+  /* border-top-left-radius: 0px;
+  border-top-right-radius: 0px;*/
   display: flex;
   height: 800px;
   background-color: black;
@@ -218,17 +347,17 @@ ion-icon {
   z-index: 1;
 }
 
-.slidernav a {
+.slidernav button {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
   background-color: #fff;
   opacity: 0.7;
   transition: opacity ease 250ms;
-  transform: translateY(-350px);
+  transform: translateY(-360px);
 }
 
-.slidernav a:hover {
+.slidernav button:hover {
   opacity: 100%;
 }
 
@@ -249,7 +378,11 @@ ion-icon {
 .firstbox-parent {
   height: 100%;
   width: 100%;
-  background-image:linear-gradient(to bottom, rgb(255,70,216), rgb(88, 58, 82));
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255, 70, 216),
+    rgb(88, 58, 82)
+  );
 }
 
 .secondbox-parent {
@@ -302,6 +435,7 @@ ion-icon {
   color: #fff;
   font-weight: 950;
   font-size: 50px;
+  font-family: "Poppins", sans-serif;
 }
 
 .cnt1 h5 {
@@ -353,6 +487,7 @@ ion-icon {
   color: #fff;
   font-weight: 950;
   font-size: 50px;
+  font-family: "Poppins", sans-serif;
 }
 
 .cnt2 h5 {
@@ -360,6 +495,7 @@ ion-icon {
   font-size: 20px;
   font-weight: 800;
   padding: 0px 20px;
+  font-family: "Poppins", sans-serif;
 }
 
 .cnt2 a {
@@ -395,7 +531,7 @@ ion-icon {
   /* background-image: linear-gradient(to right, pink, gray);*/
   justify-content: space-between;
   align-content: center;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .cnt3 {
@@ -416,12 +552,14 @@ h5 {
 .cnt3-1 h2 {
   font-weight: 950;
   font-size: 50px;
+  font-family: "Poppins", sans-serif;
 }
 
 .cnt3-1 h5 {
   font-weight: 800;
   font-size: 20px;
   padding: 10px 20px;
+  font-family: "Poppins", sans-serif;
 }
 
 .shrb {
@@ -439,10 +577,11 @@ h5 {
 .shrb4 {
   /* display: block;*/
   /*background-color: blue;*/
+  background-color: #f1f1f1;
   /*  border: 1px solid aliceblue;*/
   border-radius: 50%;
-  padding: 10px;
-  justify-content: center;
+  padding: 20px;
+  justify-content: flex-start;
   align-items: center;
   cursor: pointer;
 }
@@ -485,21 +624,18 @@ ion-icon {
   display: block;
 }
 
-.secondmain {
-  margin: 0 auto;
-  width: 90%;
-}
-
-.trending{
+.trending {
   height: 400px;
   width: 100%;
+  margin: 10px auto;
   padding: 0px 15px;
   background-color: transparent;
   position: absolute;
-  transform: translateY(440px) scale(1.02);
+  transform: translateY(425px) scale(1.02);
 }
+
 .trend {
-  margin: 0 auto;
+  margin: 0px auto;
   width: 98%;
   display: flex;
   flex-flow: column;
@@ -514,24 +650,38 @@ ion-icon {
   font-weight: 1000;
   text-align: center;
   color: #fff;
+  margin-bottom: 5px;
+  font-family: "Poppins", sans-serif;
 }
 
-.trenbox {
+.trendbox {
   display: flex;
   flex-flow: row;
+  gap: 1rem;
+}
+
+.trend1cont {
+  display: flex;
+  flex-flow: column;
+  width: 25%;
+  height: 400px;
+  background-color: #76a1c4;
+  background-image: url(/pngimages/contrbacck.png);
+  background-size: cover;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.trend1header h2 {
+  text-align: start;
+  font-family: "Poppins", sans-serif;
+  color: #000;
 }
 
 .trend1 {
-  margin: 10px;
-  width: 25%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: #fff;
-  background-image: url(/pngimages/contrbacck.png);
-  background-size: cover;
-  border-radius: 15px;
   gap: 0.5rem;
-  padding: 25px;
 }
 
 .trd1box1,
@@ -539,7 +689,7 @@ ion-icon {
 .trd1box3,
 .trd1box4 {
   width: 90%;
-  background-color: #000000a9;
+  background-color: #485e0e;
   justify-content: center;
   border-radius: 10px;
   /*  align-items: center;
@@ -548,21 +698,170 @@ ion-icon {
 
 .trend1 img {
   display: block;
-  margin: 0 auto;
+  margin: 4px auto;
   justify-self: center;
   align-self: center;
   max-width: 100%;
   height: auto;
 }
 
-/*.cathead {
+.trend2cont {
+  display: flex;
+  flex-flow: column;
+  width: 25%;
+  height: 400px;
+  background-color: #fff;
+  background-image: url(/pngimages/femalemodel2.png);
+  background-size: cover;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.trend2header h2 {
+  text-align: start;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+.trend2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.trd2box1,
+.trd2box2,
+.trd2box3,
+.trd2box4 {
+  width: 90%;
+  background-color: #b3719a;
+  justify-content: center;
+  border-radius: 10px;
+  /*  align-items: center;
+   place-items: center;*/
+}
+
+.trend2 img {
+  display: block;
+  margin: 4px auto;
+  justify-self: center;
+  align-self: center;
+  max-width: 100%;
+  height: auto;
+}
+
+.trend3cont {
+  display: flex;
+  flex-flow: column;
+  width: 25%;
+  height: 400px;
+  background-color: #a3d0d3;
+  background-image: url(/pngimages/malemodel.png);
+  background-size: cover;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.trend3header h2 {
+  text-align: start;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+.trend3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.trd3box1,
+.trd3box2,
+.trd3box3,
+.trd3box4 {
+  width: 90%;
+  background-color: #973b3b;
+  justify-content: center;
+  border-radius: 10px;
+  /*  align-items: center;
+   place-items: center;*/
+}
+
+.trend3 img {
+  display: block;
+  margin: 4px auto;
+  justify-self: center;
+  align-self: center;
+  max-width: 100%;
+  height: auto;
+}
+
+.trend4cont {
+  display: flex;
+  flex-flow: column;
+  width: 25%;
+  height: 400px;
+  background-color: #fff;
+  background-image: url(/pngimages/m);
+  background-size: cover;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.trend4header h2 {
+  text-align: start;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+.trend4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.trd4box1,
+.trd4box2,
+.trd4box3,
+.trd4box4 {
+  width: 90%;
+  background-color: #000;
+  justify-content: center;
+  border-radius: 10px;
+  /*  align-items: center;
+   place-items: center;*/
+}
+
+.trend4 img {
+  display: block;
   margin: 10px auto;
+  justify-self: center;
+  align-self: center;
+  max-width: 100%;
+  height: auto;
+}
+
+.secondmain {
+  margin: 0 auto;
+  width: 100%;
+}
+
+main hr {
+  width: 100%;
+  border: 0.5px solid #000;
+  background-color: #000;
+}
+
+.cathead {
+  margin: 10px 50px;
 }
 
 .categories {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   background-color: #e43535;
   border-radius: var(--BORDER-RADIUS);
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
 .categories a {
@@ -579,19 +878,28 @@ ion-icon {
   border-radius: 5px;
 }
 
-.categories h3 {
-  padding-top: 5px;
+.cathead h2 {
+  color: #4b5563;
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 3px;
+  font-family: "Poppins", sans-serif;
 }
 
 .firstcatslide {
   display: flex;
   flex-grow: 1;
-  padding: 20px;
+  padding: 15px;
   gap: 1rem;
+  justify-content: space-evenly;
 }
 
 .tablets,
-.phones {
+.phones,
+.shoes,
+.watches,
+.sports {
+  margin: 0 auto;
   padding: 10px 0;
   display: flex;
   flex-flow: column;
@@ -601,9 +909,181 @@ ion-icon {
   text-align: center;
 }
 
-.firstcatslide img {
-  border-radius: 50%;
+.tablets a {
+  width: 300px;
+  height: 300px;
+  background-image: url(/pngimages/ipad.png);
   background-color: #fff;
-  max-width: 100%;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.tablets a:hover {
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.tablets h3 {
   display: block;
-}*/
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.phones a {
+  width: 300px;
+  height: 300px;
+  background-image: url(/pngimages/iphone.png);
+  background-color: #fff;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.phones a:hover {
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.phones h3 {
+  display: block;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.shoes a {
+  width: 300px;
+  height: 300px;
+  background-image: url(/pngimages/nikes.png);
+  background-color: #fff;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.shoes a:hover {
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.shoes h3 {
+  display: block;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.watches a {
+  width: 300px;
+  height: 300px;
+  background-image: url(/pngimages/menswatch2.png);
+  background-color: #fff;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.watches a:hover {
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.watches h3 {
+  display: block;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.sports a {
+  width: 300px;
+  height: 300px;
+  background-image: url(/pngimages/sportballs.png);
+  background-color: #fff;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.sports a:hover {
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.sports h3 {
+  display: block;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.workout {
+  display: flex;
+  margin: 40px auto;
+  background-color: #202020;
+  border-radius: 15px;
+}
+
+.workoutsesh {
+  width: 70%;
+  display: flex;
+}
+
+.models {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.femalemodel {
+  background-color: #b3719a;
+  border-radius: 10px;
+}
+
+.femalemodel img {
+  width: 550px;
+  height: 100%;
+}
+
+.malemodel {
+  background-color: #ec4899;
+  border-radius: 10px;
+}
+
+.sportstuff {
+  display: flex;
+  flex-flow: column;
+}
+
+.sportstuff p {
+  margin: 10px 10px;
+  color: red;
+  font-size: 50px;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+  white-space: nowrap;
+}
+
+.interact {
+  margin: 50px 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #000;
+  border-radius: 15px;
+  gap: 0.5rem;
+  padding: 10px;
+}
+
+.sportstuff img {
+  width: 300px;
+  height: 280px;
+}
+
+.bball,
+.workoutmodel,
+.runningshoes,
+.gloves {
+  border-radius: 15px;
+  background-color: #a3d0d3;
+}
+
+.workoutmodel img {
+  margin: 0 30px;
+  width: 220px;
+}
