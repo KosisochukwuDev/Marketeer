@@ -44,7 +44,7 @@ html {
 body {
   font-family: "Raleway", sans-serif;
   min-width: 100%;
-  background-color: aquamarine;
+ /* background-color: aquamarine;*/
   /*min-height: 100vh;*/
   /*background-repeat: no-repeat;*/
   background-size: cover;
@@ -72,7 +72,7 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: #ffffffbe;
   padding-top: 20px;
   padding-bottom: 20px;
   /* top: 0;*/
@@ -82,11 +82,13 @@ nav {
 nav a {
   text-decoration: none;
   color: black;
+  justify-content: center;
 }
 
 .mainnav {
   display: inline-flex;
   justify-content: space-around;
+  align-items: center;
   width: 30%;
   gap: 2%;
 }
@@ -97,6 +99,10 @@ nav a {
   justify-content: flex-end;
   width: 15%;
   gap: 50%;
+}
+
+.nav2 i {
+    font-size: 40px;
 }
 
 .dropdown {
@@ -260,7 +266,7 @@ input {
   width: 50px;
   height: 40px;
   cursor: pointer;
-}
+}*/
 
 .head-pic {
   display: flex;
@@ -283,7 +289,7 @@ input {
   color: #000;
 }
 
-.searchfunc {
+/*.searchfunc {
   display: flex;
   gap: 0.1rem;
 }
@@ -845,7 +851,7 @@ ion-icon {
   width: 100%;
 }
 
-main hr {
+.secondmain hr {
   width: 100%;
   border: 0.5px solid #000;
   background-color: #000;

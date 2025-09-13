@@ -1,7 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -55,10 +63,16 @@ nav a {
     width: 15%;
     gap: 50%;
 }
+
+.nav2 i {
+    font-size: 40px;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -70,6 +84,7 @@ nav a {
     z-index: 999;
     border-radius: 4px;
 }
+
 .dropdown-content a {
     color: black;
     padding: 10px 16px;
@@ -77,12 +92,15 @@ nav a {
     display: block;
     white-space: nowrap;
 }
+
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 .dropdown:hover > a {
     color: rgb(32, 32, 189);
 }
@@ -93,6 +111,7 @@ nav a {
     position: relative;
     width: 45%;
 }
+
 #searchbar {
     width: 100%;
     padding: 10px 40px 10px 25px;
@@ -133,10 +152,12 @@ hr {
     font-weight: 500;
     margin-bottom: 40px;
 }
+
 .feat {
     font-weight: 100;
     font-size: 75px;
 }
+
 .slogan{
     font-weight: 300;
     margin: 15px 0px 15px 0px;
@@ -168,6 +189,7 @@ hr {
     display: inline-block;
     width: 35%;
 }
+
 .thumbnail {
     width: 100%;
     height: auto;
@@ -203,10 +225,12 @@ hr {
     align-items: center;
     z-index: 1000;
 }
+
 #fullVideo {
     max-width: 80%;
     max-height: 80%;
 }
+
 .close {
     position: absolute;
     top: 20px;
@@ -229,20 +253,24 @@ hr {
     padding-top: 50px;
     /* padding-bottom: 50px; */
 }
+
 #bodyunderhero {
     display: flex;
     flex-direction: column;
     width: 30%;
 }
+
 #bodyunderhero .genBtn {
     padding: 15px;
     width: 20%;
 }
+
 #textunderhero {
     width: 100%;
     font-size: 16px;
     line-height: 25px;
 }
+
 .imgunderhero{
     width: 100%;
     height: 400px;
@@ -409,6 +437,7 @@ h4 {
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
 }
+
 /* Modal Content */
 .modalForm {
     background-color: #fefefe;
@@ -422,18 +451,21 @@ h4 {
     border-radius: 20px;
     align-items: center;
 }
+
 .close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
+
 .inputForm {
     width: 450px;
     margin-bottom: 20px;
@@ -441,11 +473,13 @@ h4 {
     padding-left: 10px;
     border: 1px solid black;
 }
+
 .formHead {
     margin-bottom: 25px;
     font-weight: bolder;
     font-size: larger;
 }
+
 .inputBtn {
     width: 80px;
     height: 30px;
@@ -454,6 +488,7 @@ h4 {
     margin-right: 60px;
     border-radius: 5px;
 }
+
 #formAddress {
     width: 450px;
     border: 1px solid black;
@@ -473,6 +508,7 @@ h4 {
     top: 0;
     padding-top: 250px;
 }
+
 .signInModal{
     padding: 30px;
     padding-left: 60px;
@@ -486,15 +522,18 @@ h4 {
     height: 340px;
     margin: auto;
 }
+
 .user{
     background: transparent;
     border: none;
 }
+
 .inputBtns{
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
+
 .inputBtns .inputBtn{
     padding: 5px 5px 5px 5px;
     height: 50px;
@@ -505,6 +544,7 @@ h4 {
 .cart-items{
     margin: 80px auto;
 }
+
 table{
     width: 100%;
     border-collapse: collapse;
