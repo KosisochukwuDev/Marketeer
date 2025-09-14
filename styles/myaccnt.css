@@ -32,12 +32,16 @@ button {
 }
 
 html {
+  
+  margin: 0;
   scroll-behavior: smooth;
 }
 
 body {
+  margin: 0 auto;
   font-family: "Poppins", sans-serif;
   min-width: 100%;
+  
   /* background-color: aquamarine;*/
   /*min-height: 100vh;*/
   /*background-repeat: no-repeat;*/
@@ -48,11 +52,18 @@ main {
   margin: 90px auto;
   margin-bottom: 0;
   position: relative;
-  max-width: 95%;
   min-width: 100%;
   display: flex;
   flex-flow: column;
+  flex: 1;
   /*border-right: 1px solid #fff;*/
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 h1,
@@ -96,7 +107,7 @@ nav a {
   float: right;
   justify-content: flex-end;
   width: 15%;
-  gap: 40%;
+  gap: 30%;
 }
 
 .nav2 i {
@@ -145,6 +156,7 @@ nav a {
   position: relative;
   width: 45%;
 }
+
 #searchbar {
   width: 100%;
   padding: 10px 40px 10px 25px;
@@ -169,7 +181,7 @@ nav a {
   justify-content: center;
 }
 
-hr {
+/*hr {
   margin-top: 50px;
   margin-bottom: 20px;
   font-weight: 500;
@@ -195,6 +207,93 @@ hr {
   font-weight: 300;
   margin: 15px 0px 15px 0px;
   font-size: 25px;
+}*/
+
+#signIn {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding-top: 250px;
+}
+
+.signInModal-head {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-logo {
+  display: flex;
+}
+
+.signInModal {
+  padding: 20px;
+  background-color: #fefefeeb;
+  position: relative;
+  align-items: center;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 600px;
+  height: 700px;
+  margin: 0 auto;
+}
+
+.signInModal form {
+  margin: 10px 55px;
+}
+
+.signInModal a {
+  display: flex;
+  margin: 10px auto;
+  width: 70%;
+  border: 1px solid blueviolet;
+  background-color: blueviolet;
+  border-radius: 25px;
+  text-decoration: none;
+  color: aliceblue;
+  padding: 15px 5px;
+}
+
+.user {
+  background: transparent;
+  border: none;
+}
+
+.inputBtns {
+  display: flex;
+  width: 100%;
+  margin: 0 20px;
+  gap: 8rem;
+}
+
+.inputsigninBtns {
+  display: flex;
+}
+
+.inputsigninBtns button {
+  margin: 10px auto;
+  width: 40%;
+  border: 1px solid blueviolet;
+  background-color: blueviolet;
+  border-radius: 25px;
+  text-decoration: none;
+  color: aliceblue;
+  padding: 15px 5px;
+}
+
+.othersigninoptions {
+  margin-top: 50px;
+}
+
+.othersigninoptions i {
+  font-size: 25px;
+  margin-left: 5px;
 }
 
 .head-pic {
@@ -286,7 +385,7 @@ h3 .h3frt {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 .sidebar-bottom a {
@@ -296,7 +395,7 @@ h3 .h3frt {
   border-radius: 25px;
   text-decoration: none;
   color: aliceblue;
-  padding: 20px 5px;
+  padding: 15px 5px;
   margin-top: 12px;
   text-align: center;
   transform: translateY(10px);
@@ -310,44 +409,75 @@ h3 .h3frt {
 }
 
 .profile-content {
-    margin: 10px 3px;
+  margin: 10px 3px;
   width: 80%;
 }
 
+.profile-controls-footer a {
+    color: rgb(253, 186, 186);
+}
+
+.logout a:hover {
+    color: red;
+}
+
 .banner {
-    margin: 0 auto;
-    width: 95%;
-    height: 250px;
-    padding: 10px 20px;
-    border-radius: 15px;
-    background-image: url(/pngimages/pinkpetals.png), url(/pngimages/deliveryfast.png);
-    background-repeat: no-repeat;
-    background-position: left, 100%;
-    background-color: rgba(171, 46, 188, 0.354);
+  margin: 0 auto;
+  width: 95%;
+  height: 250px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-image: url(/pngimages/pinkpetals.png),
+    url(/pngimages/settings2.png);
+  background-repeat: no-repeat;
+  background-position: left, 90%;
+  background-size: 400px 350px;
+  background-color: rgba(171, 46, 188, 0.354);
 }
 
 .banner-left h1 {
-    margin: 0;
- color: #ffffff;
- font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+  font-weight: 800;
 }
 
 .banner-left-h3 {
-    margin: 10px 10px;
+  margin: 10px 10px;
 }
 
 .banner-left h3 {
-    margin: 5px 10px;
-    color: #fff;
-    font-weight: 700;
+  margin: 5px 10px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.overview-interact-links {
+  margin-top: 20px;
+  display: flex;
+}
+
+.overview-interact-links a {
+  margin: 0 10px;
+  margin-bottom: 3px;
+  color: #fff;
+  background-color: rgba(137, 43, 226, 0.554);
+  padding: 10px 10px;
+  border-radius: 20px;
 }
 
 .overview-interact {
-    margin: 10px auto;
-    width: 100%;
-    height: 500px;
-    border-top: 1px solid rgb(22, 4, 39);
-    border-left: 1px solid rgb(22, 4, 39);
-    border-radius: 10px;
-    border-bottom-left-radius: 0px;
+  margin: 0px auto;
+  width: 100%;
+  height: 635px;
+  border-top: 1px solid rgb(22, 4, 39);
+  border-left: 1px solid rgb(22, 4, 39);
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }

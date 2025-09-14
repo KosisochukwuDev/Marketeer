@@ -22,17 +22,19 @@
 </head>
 
 <body>
-    <header>
 
+    <header>
         <nav>
-            <span class="mainnav">
+            <div class="mainnav">
+
                 <div class="dropdown">
+
                     <div class="head-pic">
                         <a href="/html/marketeer.html">
                             <h1>Marketeer</h1>
 
                             <a href="#">
-                                <abbr title="back to top"><img src="/preview images/logo.png" alt="Marketeer.Co"
+                                <abbr title="back to top"><img src="/previewimages/logo.png" alt="Marketeer.Co"
                                         width="40" height="40"></abbr>
                             </a>
                     </div>
@@ -52,7 +54,7 @@
                 </div>
                 <a href="/html/categories.html#cat">Categories</a>
                 <a href="">Brand Outlet</a>
-            </span>
+            </div>
 
             <div class="search-container">
                 <input type="search" name="search" placeholder="Search" id="searchbar">
@@ -61,30 +63,41 @@
                 </button>
             </div>
 
-            <span class="nav2">
+            <div class="nav2">
                 <button class="user" onclick="openSignIn()"><i class="fa fa-user" aria-hidden="true"></i></button>
                 <div id="signIn">
                     <div class="signInModal">
-                        <span class="close" onclick="closeSignIn()">&times;</span>
-                        <center>
+                        <div class="close" onclick="closeSignIn()">&times;</div>
+                        <div class="signInModal-head">
+                            <div class="modal-logo">
+                                <h1>Marketeer</h1>
+                                <img src="/previewimages/logo.png" alt="Marketeer.Co" width="40" height="40">
+                            </div>
                             <p class="formHead">Sign in to your account</p>
-                        </center>
+                        </div>
                         <form action="" method="get">
                             <label for="email">Email</label><br>
                             <input type="email" class="inputForm" required><br>
                             <label for="password">Password</label><br>
                             <input type="password" class="inputForm" required><br>
-                            <div class="inputBtns">
-                                <button type="submit" class="inputBtn">Sign In</button>
-                                <button type="reset" class="inputBtn">Forgot Password</button>
+
+                            <div class="inputsigninBtns">
+                                <button type="submit" class="inputsigninBtn">Sign In</button>
+                                <button type="reset" class="inputsigninBtn">Forgot Password</button>
                             </div>
                         </form>
+
+                        <div class="othersigninoptions">
+                            <a href="">Sign In with Google<i class="fa fa-google"></i></a>
+                            <a href="">Sign In with Facebook <i class="fa fa-facebook"></i></a>
+                            <a href="">Sign In with Apple <i class="fa fa-apple"></i></a>
+                            <a href="">Sign In As Guest <i class="fa fa-user"></i></a>
+                        </div>
                     </div>
                 </div>
-                <a href="/html/cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-            </span>
+                <a href="/html/cart.html"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </div>
         </nav>
-
     </header>
 
     <main>
@@ -124,7 +137,9 @@
 
                     <div class="profile-controls-footer">
                         <a href="">Manage Accounts</a>
-                        <a href="">Log Out</a>
+                        <div class="logout">
+                            <a href="">Log Out</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,7 +163,7 @@
                     <div class="overview-interact-links">
                         <a href="">Account Overview</a>
                         <a href="">Payments</a>
-                        <a href=""></a>
+                        <a href="">Security</a>
                     </div>
                     <div class="overview-interact">
                     </div>
@@ -156,6 +171,12 @@
             </div>
         </div>
     </main>
+
+    <footer>
+        <a href=""><i class="fa fa-home"></i></a>
+        <a href="">Marketteer.Co</a>
+    </footer>
+
     <script src="/Js/marketeer.js"></script>
 </body>
 

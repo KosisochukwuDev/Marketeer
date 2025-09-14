@@ -30,7 +30,7 @@
                             <h1>Marketeer</h1>
                     
                             <a href="#">
-                                <abbr title="back to top"><img src="/preview images/logo.png" alt="Marketeer.Co" width="40"
+                                <abbr title="back to top"><img src="/previewimages/logo.png" alt="Marketeer.Co" width="40"
                                         height="40"></abbr>
                             </a>
                     </div>
@@ -59,28 +59,40 @@
                 </button>
             </div>
 
-            <span class="nav2">
-                <button class="user" onclick="openSignIn()"><i class="fa fa-user" aria-hidden="true"></i></button>
-                <div id="signIn">
-                    <div class="signInModal">
-                        <span class="close" onclick="closeSignIn()">&times;</span>
-                        <center>
-                            <p class="formHead">Sign in to your account</p>
-                        </center>
-                        <form action="" method="get">
-                            <label for="email">Email</label><br>
-                            <input type="email" class="inputForm" required><br>
-                            <label for="password">Password</label><br>
-                            <input type="password" class="inputForm" required><br>
-                            <div class="inputBtns">
-                                <button type="submit" class="inputBtn">Sign In</button>
-                                <button type="reset" class="inputBtn">Forgot Password</button>
-                            </div>
-                        </form>
+        <div class="nav2">
+            <button class="user" onclick="openSignIn()"><i class="fa fa-user" aria-hidden="true"></i></button>
+            <div id="signIn">
+                <div class="signInModal">
+                    <div class="close" onclick="closeSignIn()">&times;</div>
+                    <div class="signInModal-head">
+                        <div class="modal-logo">
+                            <h1>Marketeer</h1>
+                            <img src="/previewimages/logo.png" alt="Marketeer.Co" width="40" height="40">
+                        </div>
+                        <p class="formHead">Sign in to your account</p>
+                    </div>
+                    <form action="" method="get">
+                        <label for="email">Email</label><br>
+                        <input type="email" class="inputForm" required><br>
+                        <label for="password">Password</label><br>
+                        <input type="password" class="inputForm" required><br>
+        
+                        <div class="inputsigninBtns">
+                            <button type="submit" class="inputsigninBtn">Sign In</button>
+                            <button type="reset" class="inputsigninBtn">Forgot Password</button>
+                        </div>
+                    </form>
+        
+                    <div class="othersigninoptions">
+                        <a href="">Sign In with Google<i class="fa fa-google"></i></a>
+                        <a href="">Sign In with Facebook <i class="fa fa-facebook"></i></a>
+                        <a href="">Sign In with Apple <i class="fa fa-apple"></i></a>
+                        <a href="">Sign In As Guest <i class="fa fa-user"></i></a>
                     </div>
                 </div>
-                <a href="/html/cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-            </span>
+            </div>
+            <a href="/html/cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        </div>
         </nav>
 
     </header>
@@ -118,7 +130,7 @@
                                 <input type="password" class="inputForm" required><br>
                                 <label for="">Confirm Password</label><br>
                                 <input type="password" class="inputForm" required><br>
-                                <button type="submit" class="inputBtn">Enter</button>
+                                <button type="submit" class="inputBtn">submit</button>
                             </form>
                         </div>
                     </div>

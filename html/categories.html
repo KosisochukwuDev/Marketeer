@@ -53,7 +53,7 @@
                             <h1>Marketeer</h1>
 
                             <a href="#">
-                                <abbr title="back to top"><img src="/preview images/logo.png" alt="Marketeer.Co" width="40" height="40"></abbr>
+                                <abbr title="back to top"><img src="/previewimages/logo.png" alt="Marketeer.Co" width="40" height="40"></abbr>
                             </a>
                     </div>
                     <div class="dropdown-content">
@@ -81,28 +81,40 @@
                 </button>
             </div>
 
-            <span class="nav2">
+            <div class="nav2">
                 <button class="user" onclick="openSignIn()"><i class="fa fa-user" aria-hidden="true"></i></button>
                 <div id="signIn">
                     <div class="signInModal">
-                        <span class="close" onclick="closeSignIn()">&times;</span>
-                        <center>
+                        <div class="close" onclick="closeSignIn()">&times;</div>
+                        <div class="signInModal-head">
+                            <div class="modal-logo">
+                                <h1>Marketeer</h1>
+                                <img src="/previewimages/logo.png" alt="Marketeer.Co" width="40" height="40">
+                            </div>
                             <p class="formHead">Sign in to your account</p>
-                        </center>
+                        </div>
                         <form action="" method="get">
                             <label for="email">Email</label><br>
                             <input type="email" class="inputForm" required><br>
                             <label for="password">Password</label><br>
                             <input type="password" class="inputForm" required><br>
-                            <div class="inputBtns">
-                                <button type="submit" class="inputBtn">Sign In</button>
-                                <button type="reset" class="inputBtn">Forgot Password</button>
+            
+                            <div class="inputsigninBtns">
+                                <button type="submit" class="inputsigninBtn">Sign In</button>
+                                <button type="reset" class="inputsigninBtn">Forgot Password</button>
                             </div>
                         </form>
+            
+                        <div class="othersigninoptions">
+                            <a href="">Sign In with Google<i class="fa fa-google"></i></a>
+                            <a href="">Sign In with Facebook <i class="fa fa-facebook"></i></a>
+                            <a href="">Sign In with Apple <i class="fa fa-apple"></i></a>
+                            <a href="">Sign In As Guest <i class="fa fa-user"></i></a>
+                        </div>
                     </div>
                 </div>
-                <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-            </span>
+                <a href="/html/cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </div>
         </nav>
 
     </header>
@@ -335,7 +347,45 @@
                 <button onclick="goToSlide(3)" class="dot"></button>
             </div>
 
+
             <script>
+    let currentSlide = 1;
+    const totalSlides = 3; // you have slide1, slide2, slide3
+    const dots = document.querySelectorAll(".slidernav .dot");
+
+    function goToSlide(n) {
+        const container = document.querySelector(".slider");
+        const slide = document.getElementById("slide" + n);
+
+        container.scrollTo({
+            left: slide.offsetLeft,
+            behavior: "smooth"
+        });
+
+        // update dots
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[n - 1].classList.add("active");
+
+        currentSlide = n; // keep track if clicked manually
+    }
+
+    // Auto-scroll function
+    function autoScroll() {
+        goToSlide(currentSlide);
+        currentSlide++;
+        if (currentSlide > totalSlides) {
+            currentSlide = 1; // loop back
+        }
+    }
+
+    // Run autoScroll every 5 seconds
+    setInterval(autoScroll, 5000);
+
+    // Initialize first dot as active
+    goToSlide(1);
+</script>
+
+           <!-- <script>
                 function goToSlide(n) {
                     const container = document.querySelector(".slider");   // your slider wrapper
                     const slide = document.getElementById("slide" + n);
@@ -346,7 +396,32 @@
                         behavior: "smooth"
                     });
                 }
-            </script>
+
+                let currentSlide = 1;
+                    const totalSlides = 3; // you have slide1, slide2, slide3
+
+                    function goToSlide(n) {
+                        const container = document.querySelector(".slider");
+                        const slide = document.getElementById("slide" + n);
+
+                        container.scrollTo({
+                            left: slide.offsetLeft,
+                            behavior: "smooth"
+                        });
+                    }
+
+                    // Auto-scroll function
+                    function autoScroll() {
+                        goToSlide(currentSlide);
+                        currentSlide++;
+                        if (currentSlide > totalSlides) {
+                            currentSlide = 1; // loop back to first slide
+                        }
+                    }
+
+                    // Run autoScroll every 5 seconds
+                    setInterval(autoScroll, 4000);
+            </script>-->
 
         </div>
 
@@ -451,7 +526,7 @@
         </section>
 
 
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis porro ut a voluptatem recusandae impedit
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis porro ut a voluptatem recusandae impedit
         similique, quo quasi natus esse odio quaerat ducimus dolorem asperiores voluptas incidunt quos cum dolore!
         Corrupti cupiditate asperiores numquam quod fugiat, vel delectus, sint ad perferendis dolorem ullam non
         laboriosam eveniet mollitia explicabo maxime laborum exercitationem assumenda quos a minus quaerat praesentium,
@@ -492,7 +567,7 @@
         quibusdam sint!
         Blanditiis facilis, nam architecto harum, dolores aliquid consectetur quae distinctio cupiditate minus maxime
         ipsum eaque nesciunt deleniti magni quidem! Delectus alias ad cum voluptas sapiente eveniet id deserunt minima
-        harum!
+        harum!</p>
 
     </main>
 

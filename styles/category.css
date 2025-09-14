@@ -199,6 +199,93 @@ hr {
   font-size: 25px;
 }
 
+#signIn {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding-top: 250px;
+}
+
+.signInModal-head {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-logo {
+  display: flex;
+}
+
+.signInModal {
+  padding: 20px;
+  background-color: #fefefeeb;
+  position: relative;
+  align-items: center;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 600px;
+  height: 700px;
+  margin: 0 auto;
+}
+
+.signInModal form {
+  margin: 10px 55px;
+}
+
+.signInModal a {
+  display: flex;
+  margin: 10px auto;
+  width: 70%;
+  border: 1px solid blueviolet;
+  background-color: blueviolet;
+  border-radius: 25px;
+  text-decoration: none;
+  color: aliceblue;
+  padding: 15px 5px;
+}
+
+.user {
+  background: transparent;
+  border: none;
+}
+
+.inputBtns {
+  display: flex;
+  width: 100%;
+  margin: 0 20px;
+  gap: 8rem;
+}
+
+.inputsigninBtns {
+  display: flex;
+}
+
+.inputsigninBtns button {
+  margin: 10px auto;
+  width: 40%;
+  border: 1px solid blueviolet;
+  background-color: blueviolet;
+  border-radius: 25px;
+  text-decoration: none;
+  color: aliceblue;
+  padding: 15px 5px;
+}
+
+.othersigninoptions {
+    margin-top: 50px;
+}
+
+.othersigninoptions i {
+    font-size: 25px;
+    margin-left: 5px;
+}
+
 /*.header {
   width: 100%;
   height: 45px;
