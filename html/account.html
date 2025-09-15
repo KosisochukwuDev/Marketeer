@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Patrick and Kosi">
+    <meta name="description" content="Marketeer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/preview images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/category.css">
+    <link rel="stylesheet" href="/styles/marketeer.css">
+    <link rel="stylesheet" href="/styles/myaccnt.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>MyAccnt</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="mainnav">
+
+                <div class="dropdown">
+
+                    <div class="head-pic">
+                        <a href="/html/marketeer.html">
+                            <h1>Marketeer</h1>
+
+                            <a href="#">
+                                <abbr title="back to top"><img src="/previewimages/logo.png" alt="Marketeer.Co"
+                                        width="40" height="40"></abbr>
+                            </a>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#underhero">Overview</a>
+                        <a href="#tabSection">Why Us</a>
+                        <a href="#cards">Blog</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="/html/categories.html">Store</a>
+                    <div class="dropdown-content">
+                        <a href="">Recommended for you</a>
+                        <a href=""> Our Partners</a>
+                        <a href=""></a>
+                    </div>
+                </div>
+                <a href="/html/categories.html#cat">Categories</a>
+                <a href="">Brand Outlet</a>
+            </div>
+
+            <div class="search-container">
+                <input type="search" name="search" placeholder="Search" id="searchbar">
+                <button id="search-button">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="nav2">
+                <button class="user" onclick="openSignIn()"><abbr title="favorites"><i class="fa fa-heart" aria-hidden="true"></i></abbr></button>
+              <!--  <div id="signIn">
+                    <div class="signInModal">
+                        <div class="close" onclick="closeSignIn()">&times;</div>
+                        <div class="signInModal-head">
+                            <div class="modal-logo">
+                                <h1>Marketeer</h1>
+                                <img src="/previewimages/logo.png" alt="Marketeer.Co" width="40" height="40">
+                            </div>
+                            <p class="formHead">Sign in to your account</p>
+                        </div>
+                        <form action="" method="get">
+                            <label for="email">Email</label><br>
+                            <input type="email" class="inputForm" required><br>
+                            <label for="password">Password</label><br>
+                            <input type="password" class="inputForm" required><br>
+
+                            <div class="inputsigninBtns">
+                                <button type="submit" class="inputsigninBtn">Sign In</button>
+                                <button type="reset" class="inputsigninBtn">Forgot Password</button>
+                            </div>
+                        </form>
+
+                        <div class="othersigninoptions">
+                            <a href="">Sign In with Google<i class="fa fa-google"></i></a>
+                            <a href="">Sign In with Facebook <i class="fa fa-facebook"></i></a>
+                            <a href="">Sign In with Apple <i class="fa fa-apple"></i></a>
+                            <a href="">Sign In As Guest <i class="fa fa-user"></i></a>
+                        </div>
+                    </div>
+                </div>-->
+                <a href="/html/cart.html"><abbr title="messages"><i class="fa fa-envelope" aria-hidden="true"></i></abbr></a>
+
+                <a href=""><abbr title="contact us"><i class="fa fa-question-circle"></i></abbr></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="profile">
+
+            <div class="sidebar">
+
+                <div class="sidebar-top">
+
+                    <div class="profile-box">
+
+                        <div class="profile-box-name">
+                            <h3><span class="h3frt">Welcome back,</span></h3>
+                                <h3><span id="displayname" class="name">Patrick</span></h3>
+                        </div>
+
+                        <div class="profile-box-img">
+                            <a href=""><img src="/pngimages/petaccess.png" alt=""></a>
+                        </div>
+
+                        <div class="profile-box-icons">
+                            <a href=""><i class=" fa fa-edit"></i></a>
+                            <a href=""><i class="fa fa-"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-bottom">
+
+                    <div class="profile-controls">
+                        <a href="">My Cart</a>
+                        <a href="">My Orders</a>
+                        <a href="">Your Wallet</a>
+                        <a href="">Become a Seller</a>
+                        <a href="">Contact Us</U></a>
+                        <a href="">Account Settings</a>
+                    </div>
+
+                    <div class="profile-controls-footer">
+                        <a href="">Manage Accounts</a>
+                        <div class="logout">
+                            <a href="#" onclick="logout()">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="bannercont">
+                    <div class="banner">
+                        <div class="banner-left">
+                            <h1>Manage Your Account Your Way</h1>
+
+                            <div class="banner-left-h3">
+                                <h3>Set Priority Products To show Up when you Log In</h3>
+
+                                <h3>Dont Like The Ads You See..?, Change That And More</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overview-section">
+                    <div class="overview-interact-links">
+                        <a href="">Account Overview</a>
+                        <a href="">Payments</a>
+                        <a href="">Security</a>
+                    </div>
+                    <div class="overview-interact">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href=""><i class="fa fa-home"></i></a>
+        <a href="">Marketteer.Co</a>
+    </footer>
+
+<script>
+ let name = localStorage.getItem("username");
+    if (name) {
+        document.getElementById("displayname").textContent = name;
+    } else {
+        // optional: keep them on homepage if not logged in
+        window.location.href = "marketeer.html";
+    }
+</script>
+
+<script>
+    function logout() {
+        localStorage.removeItem("username");
+        window.location.href = "marketeer.html";
+    }
+</script>
+
+    <script src="/Js/marketeer.js"></script>
+</body>
+
+
+</html>

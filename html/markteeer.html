@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="KOsi and Patrick">
+    <meta name="author" content="kosi">
+    <title>Marketeer</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="marketeer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <span class="mainnav">
+                <div class="dropdown">
+                    <a href="#">Home</a>
+                    <div class="dropdown-content">
+                        <a href="#underhero">Overview</a>
+                        <a href="#tabSection">Why Us</a>
+                        <a href="#cards">Blog</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="">Store</a>
+                    <div class="dropdown-content">
+                        <a href="categories.html">Trending Items</a>
+                        <a href="">Shop</a>
+                        <a href=""></a>
+                    </div>
+                </div>
+                <a href="">Categories</a>
+                <a href="">Brand Outlet</a>
+            </span>
+
+            <div class="search-container">
+                <input type="search" name="search" placeholder="Search" id="searchbar">
+                <button id="search-button">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <span class="nav2">
+                <button class="user" onclick="openSignIn()"><i class="fa fa-user" aria-hidden="true"></i></button>
+                <div id="signIn">
+                    <div class="signInModal">
+                        <span class="close" onclick="closeSignIn()">&times;</span>
+                        <center>
+                            <p class="formHead">Sign in to your account</p>
+                        </center>
+                        <form action="" method="get">
+                            <label for="email">Email</label><br>
+                            <input type="email" class="inputForm" required><br>
+                            <label for="password">Password</label><br>
+                            <input type="password" class="inputForm" required><br>
+                            <div class="inputBtns">
+                                <button type="submit" class="inputBtn">Sign In</button>
+                                <button type="reset" class="inputBtn">Forgot Password</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <a href="emptycart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </span>
+        </nav>
+
+    </header>
+
+
+    <main>
+        <div id="body">
+            <hr>
+            <h2 class="title">Nigeria's Leading E-Commerce Platform</h2>
+            <div class="hero">
+                <div>
+                    <div>
+                        <h1 class="feat">Simple</h1>
+                        <h1 class="feat">Fast</h1>
+                        <h1 class="feat">Reliable</h1>
+                    </div>
+                    <h3 class="slogan">The African Marketplace at Your Fingertips</h3>
+                    <button class="genBtn" onclick="openModal()">Sign Up</button>
+                    <div id="modalSign">
+                        <div class="modalForm">
+                            <span onclick="closeModal()" class="close">&times;</span>
+                            <center>
+                                <p class="formHead">Create an Account</p>
+                            </center>
+                            <form action="" method="get">
+                                <label for="">Name</label><br>
+                                <input type="text" class="inputForm" required><br>
+                                <label for="">Email</label><br>
+                                <input type="email" class="inputForm" required><br>
+                                <label for="">Country</label><br>
+                                <input type="text" class="inputForm" required><br>
+                                <label for="">Address</label><br>
+                                <textarea name="" id="formAddress" rows="5" required></textarea><br>
+                                <label for="">Password</label><br>
+                                <input type="password" class="inputForm" required><br>
+                                <label for="">Confirm Password</label><br>
+                                <input type="password" class="inputForm" required><br>
+                                <button type="submit" class="inputBtn">Enter</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-thumbnail">
+                    <img src="https://cdn.pixabay.com/photo/2017/10/29/17/31/online-2900303_640.jpg" alt=""
+                        class="thumbnail" onclick="openVideo()">
+                    <img src="https://www.freepnglogos.com/uploads/play-button-png/index-media-cover-art-play-button-overlay-5.png"
+                        alt="" class="play-button" onclick="openVideo()">
+                </div>
+                <div id="videoModal" class="modal">
+                    <!-- the class is for styling and the id is for js -->
+                    <span class="close" onclick="closeVideo()">&times;</span>
+                    <video src="https://group-live.jumia.is/videos/special/homepage.mp4" id="fullVideo">Your browser
+                        doesn't
+                        support this
+                        video format</video>
+                </div>
+            </div>
+            <div id="underhero">
+                <div id="imgunderhero">
+                    <img src="https://www.pngall.com/wp-content/uploads/5/Online-Payment-PNG-Image-HD.png" alt=""
+                        class="imgunderhero">
+                </div>
+                <div id="bodyunderhero">
+                    <h2>A Digital Marketplace</h2><br>
+                    <p id="textunderhero">Welcome to Marketeer, your one-stop online marketplace designed with Africa in
+                        mind. We're passionate about connecting people across the continent through a seamless and
+                        reliable shopping experience. Whether you're in Lagos, Nairobi, Accra, or Kigali, we aim to
+                        bring quality products closer to you—from local crafts and fashion to everyday essentials and
+                        tech gadgets. Our mission is to support local businesses, empower entrepreneurs, and make online
+                        shopping accessible, affordable, and trustworthy for everyone in Africa.</p>
+                    <button class="genBtn">Places</button>
+                </div>
+            </div>
+
+            <div id="tabSection">
+                <div id="topTabSection">
+                    <h4>Why US?</h4>
+                    <div id="tabButton">
+                        <button data-tab="tab1" class="tabButtons active">Our Services</button>
+                        <button data-tab="tab2" class="tabButtons">Our Impact</button>
+                        <button data-tab="tab3" class="tabButtons">Sustainability</button>
+                    </div>
+                </div>
+
+                <div class="dot">
+                    <div class="tabs active" id="tab1">
+                        <div class="tab-content">
+                            <div>
+                                <p>Product Delivery/ Shipping</p>
+                                <ul>
+                                    <li>Free delivery options</li>
+                                    <li>Same-day or next-day shipping</li>
+                                    <li>International shipping</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p>24/7 Customer Support</p>
+                                <ul>
+                                    <li>Live chat, email, or phone support</li>
+                                    <li>Order tracking assistance</li>
+                                    <li>Returns or complaints handling</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p>Easy Returns & Refunds</p>
+                                <ul>
+                                    <li>Clear, friendly return policies</li>
+                                    <li>Exchange services</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div>
+                                <p>Secure Payment Processing</p>
+                                <ul>
+                                    <li>Credit/debit cards, PayPal, Apple Pay, etc.</li>
+                                    <li>Encrypted payment gateways</li>
+                                    <li>Buy Now, Pay Later options</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p>Loyalty Programs / Rewards</p>
+                                <ul>
+                                    <li>Discounts for repeat customers</li>
+                                    <li>Referral bonuses</li>
+                                    <li>First-time buyer promotions</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p>Order Fulfillment & Packaging</p>
+                                <ul>
+                                    <li>Eco-friendly packaging</li>
+                                    <li>Gift wrapping options</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tabs" id="tab2">
+                        <div class="tab-content">
+                            <div>
+                                <p>48 countries across Africa</p>
+                                <ul>
+                                    <li>Free delivery options</li>
+                                    <li>Same-day or next-day shipping</li>
+                                    <li>International shipping</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p>Over 2000+ monthly customers</p>
+                                <ul>
+                                    <li>Live chat, email, or phone support</li>
+                                    <li>Order tracking assistance</li>
+                                    <li>Returns or complaints handling</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p>100+ partnerships worldwide</p>
+                                <ul>
+                                    <li>Clear, friendly return policies</li>
+                                    <li>Exchange services</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs" id="tab3">
+                        <div class="tab-content">
+                            <div>
+                                <p>Eco-friendly packaging</p>
+                                <ul>
+                                    <li>Free delivery options</li>
+                                    <li>Same-day or next-day shipping</li>
+                                    <li>International shipping</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p>5% projected International Growth</p>
+                                <ul>
+                                    <li>Live chat, email, or phone support</li>
+                                    <li>Order tracking assistance</li>
+                                    <li>Returns or complaints handling</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p>Waste Reduction Efforts</p>
+                                <ul>
+                                    <li>Clear, friendly return policies</li>
+                                    <li>Exchange services</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <h2>Our Latest News</h2>
+            <div id="cards">
+                <div class="card"><a href="">
+                        <h3>Marketeer's Technologies: Everyone wants to integrate the APIs</h3>
+                        <p>August 11, 2025 | Company News</p>
+                    </a></div>
+                <div class="card"><a href="">
+                        <h3>Exclusive: Marketeer is projected to sell for $250 Billion!</h3>
+                        <p>September 1, 2025 | Company News</p>
+                    </a></div>
+                <div class="card"><a href="">
+                        <h3>Breaking: Marketeer acquires Konga</h3>
+                        <p>September 2, 2025 | Company News</p>
+                    </a></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="">Contact Us</a>
+        <p>Copyright &copy; Marketeer, 2025</p>
+    </footer>
+
+    <script src="marketeer.js"></script>
+
+</body>
+
+</html>

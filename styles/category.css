@@ -44,7 +44,7 @@ html {
 body {
   font-family: "Raleway", sans-serif;
   min-width: 100%;
-  background-color: aquamarine;
+  /* background-color: aquamarine;*/
   /*min-height: 100vh;*/
   /*background-repeat: no-repeat;*/
   background-size: cover;
@@ -72,7 +72,7 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: #ffffffbe;
   padding-top: 20px;
   padding-bottom: 20px;
   /* top: 0;*/
@@ -82,21 +82,28 @@ nav {
 nav a {
   text-decoration: none;
   color: black;
+  justify-content: center;
 }
 
 .mainnav {
   display: inline-flex;
   justify-content: space-around;
+  align-items: center;
   width: 30%;
   gap: 2%;
 }
 
 .nav2 {
-  display: inline-flex;
+  margin: 0;
+  display: flex;
   float: right;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   width: 15%;
-  gap: 50%;
+  gap: 1rem;
+}
+
+.nav2 i {
+  font-size: 40px;
 }
 
 .dropdown {
@@ -193,6 +200,93 @@ hr {
   font-size: 25px;
 }
 
+#signIn {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding-top: 250px;
+}
+
+.signInModal-head {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-logo {
+  display: flex;
+}
+
+.signInModal {
+  padding: 20px;
+  background-color: #fefefeeb;
+  position: relative;
+  align-items: center;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 600px;
+  height: 700px;
+  margin: 0 auto;
+}
+
+.signInModal form {
+  margin: 10px 55px;
+}
+
+.signInModal a {
+  display: flex;
+  margin: 10px auto;
+  width: 70%;
+  border: 1px solid blueviolet;
+  background-color: blueviolet;
+  border-radius: 25px;
+  text-decoration: none;
+  color: aliceblue;
+  padding: 15px 5px;
+}
+
+.user {
+  background: transparent;
+  border: none;
+}
+
+.inputBtns {
+  display: flex;
+  width: 100%;
+  margin: 0 20px;
+  gap: 8rem;
+}
+
+.inputsigninBtns {
+  display: flex;
+}
+
+.inputsigninBtns button {
+  margin: 10px auto;
+  width: 40%;
+  border: 1px solid blueviolet;
+  background-color: blueviolet;
+  border-radius: 25px;
+  text-decoration: none;
+  color: aliceblue;
+  padding: 15px 5px;
+}
+
+.othersigninoptions {
+  margin-top: 50px;
+}
+
+.othersigninoptions i {
+  font-size: 25px;
+  margin-left: 5px;
+}
+
 /*.header {
   width: 100%;
   height: 45px;
@@ -260,7 +354,7 @@ input {
   width: 50px;
   height: 40px;
   cursor: pointer;
-}
+}*/
 
 .head-pic {
   display: flex;
@@ -283,7 +377,7 @@ input {
   color: #000;
 }
 
-.searchfunc {
+/*.searchfunc {
   display: flex;
   gap: 0.1rem;
 }
@@ -319,7 +413,7 @@ input {
   /* border-top-left-radius: 0px;
   border-top-right-radius: 0px;*/
   display: flex;
-  height: 800px;
+  height: 750px;
   background-color: black;
   width: 100%;
   flex-direction: row;
@@ -631,7 +725,7 @@ ion-icon {
   padding: 0px 15px;
   background-color: transparent;
   position: absolute;
-  transform: translateY(425px) scale(1.02);
+  transform: translateY(370px) scale(1.02);
 }
 
 .trend {
@@ -664,53 +758,77 @@ ion-icon {
   display: flex;
   flex-flow: column;
   width: 25%;
-  height: 400px;
+  height: 350px;
   background-color: #76a1c4;
   background-image: url(/pngimages/contrbacck.png);
   background-size: cover;
   border-radius: 10px;
-  padding: 25px;
+  padding: 15px;
 }
 
 .trend1header h2 {
   text-align: start;
   font-family: "Poppins", sans-serif;
-  color: #000;
+  color: #fff;
 }
 
 .trend1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .trd1box1,
 .trd1box2,
 .trd1box3,
 .trd1box4 {
-  width: 90%;
-  background-color: #485e0e;
+  margin: 0px auto;
+  width: 160px;
+  height: 125px;
   justify-content: center;
   border-radius: 10px;
   /*  align-items: center;
    place-items: center;*/
 }
 
-.trend1 img {
-  display: block;
-  margin: 4px auto;
-  justify-self: center;
-  align-self: center;
-  max-width: 100%;
-  height: auto;
+.trd1box1 {
+  background-image: url(/pngimages/ps5contr.png);
+  background-color: #41fc8fac;
+  background-position: center;
+  background-size: 150px;
+  background-repeat: no-repeat;
+}
+
+.trd1box2 {
+  background-image: url(/pngimages/xboxcontr.png);
+  background-color: #41fc8fac;
+  background-position: center;
+  background-size: 150px;
+  background-repeat: no-repeat;
+}
+
+.trd1box3 {
+  background-image: url(/pngimages/gtav.png);
+  background-color: #41fc8fac;
+  background-position: center;
+  background-size: 100px;
+  background-repeat: no-repeat;
+}
+
+.trd1box4 {
+  background-image: url(/pngimages/gamingpc.png);
+  background-color: #41fc8fac;
+  background-position: center;
+  background-size: 150px;
+  background-repeat: no-repeat;
 }
 
 .trend2cont {
   display: flex;
   flex-flow: column;
   width: 25%;
-  height: 400px;
-  background-color: #fff;
+  height: 350px;
+  background-color: #bab8b8;
   background-image: url(/pngimages/femalemodel2.png);
   background-size: cover;
   border-radius: 10px;
@@ -719,7 +837,7 @@ ion-icon {
 
 .trend2header h2 {
   text-align: start;
-  color: #000;
+  color: #8d0909;
   font-family: "Poppins", sans-serif;
 }
 
@@ -733,7 +851,9 @@ ion-icon {
 .trd2box2,
 .trd2box3,
 .trd2box4 {
-  width: 90%;
+ margin: 0 auto;
+  width: 160px;
+  height: 125px;
   background-color: #b3719a;
   justify-content: center;
   border-radius: 10px;
@@ -741,20 +861,43 @@ ion-icon {
    place-items: center;*/
 }
 
-.trend2 img {
-  display: block;
-  margin: 4px auto;
-  justify-self: center;
-  align-self: center;
-  max-width: 100%;
-  height: auto;
+.trd2box1 {
+  background-image: url(/pngimages/womenswatch.png);
+  background-color: #b3719abe;
+  background-position: center;
+  background-size: 110px;
+  background-repeat: no-repeat;
+}
+
+.trd2box2 {
+  background-image: url(/pngimages/womensbags.png);
+  background-color: #b3719abe;
+  background-position: center;
+  background-size: 150px;
+  background-repeat: no-repeat;
+}
+
+.trd2box3 {
+  background-image: url(/pngimages/necklace3.png);
+  background-color: #b3719abe;
+  background-position: center;
+  background-size: 120px;
+  background-repeat: no-repeat;
+}
+
+.trd2box4 {
+  background-image: url(/pngimages/femalemodel.png);
+  background-color: #b3719abe;
+  background-position: top top;
+  background-size: 150px;
+  background-repeat: no-repeat;
 }
 
 .trend3cont {
   display: flex;
   flex-flow: column;
   width: 25%;
-  height: 400px;
+  height: 350px;
   background-color: #a3d0d3;
   background-image: url(/pngimages/malemodel.png);
   background-size: cover;
@@ -764,7 +907,7 @@ ion-icon {
 
 .trend3header h2 {
   text-align: start;
-  color: #000;
+  color: #ffffff;
   font-family: "Poppins", sans-serif;
 }
 
@@ -778,7 +921,9 @@ ion-icon {
 .trd3box2,
 .trd3box3,
 .trd3box4 {
-  width: 90%;
+ margin: 0 auto;
+   width: 160px;
+  height: 125px;
   background-color: #973b3b;
   justify-content: center;
   border-radius: 10px;
@@ -786,22 +931,45 @@ ion-icon {
    place-items: center;*/
 }
 
-.trend3 img {
-  display: block;
-  margin: 4px auto;
-  justify-self: center;
-  align-self: center;
-  max-width: 100%;
-  height: auto;
+.trd3box1 {
+  background-image: url(/pngimages/menswatch1.png);
+  background-color: #973b3bc6;
+  background-position: center;
+  background-size: 110px;
+  background-repeat: no-repeat;
+}
+
+.trd3box2 {
+  background-image: url(/pngimages/mensshirts.png);
+  background-color: #973b3bc6;
+  background-position: center;
+  background-size: 150px;
+  background-repeat: no-repeat;
+}
+
+.trd3box3 {
+  background-image: url(/pngimages/mensring.png);
+  background-color: #973b3bc6;
+  background-position: center;
+  background-size: 120px;
+  background-repeat: no-repeat;
+}
+
+.trd3box4 {
+  background-image: url(/pngimages/whiteshoes.png);
+  background-color: #973b3bc6;
+  background-position: center;
+  background-size: 180px;
+  background-repeat: no-repeat;
 }
 
 .trend4cont {
   display: flex;
   flex-flow: column;
   width: 25%;
-  height: 400px;
-  background-color: #fff;
-  background-image: url(/pngimages/m);
+  height: 350px;
+  background-color: #403f3f;
+  background-image: url(/pngimages/iphone3.png);
   background-size: cover;
   border-radius: 10px;
   padding: 25px;
@@ -809,7 +977,7 @@ ion-icon {
 
 .trend4header h2 {
   text-align: start;
-  color: #000;
+  color: red;
   font-family: "Poppins", sans-serif;
 }
 
@@ -823,21 +991,122 @@ ion-icon {
 .trd4box2,
 .trd4box3,
 .trd4box4 {
-  width: 90%;
-  background-color: #000;
+ margin: 0 auto;
+   width: 160px;
+  height: 125px;
+  background-color: #835858dc;
   justify-content: center;
   border-radius: 10px;
   /*  align-items: center;
    place-items: center;*/
 }
 
-.trend4 img {
-  display: block;
-  margin: 10px auto;
-  justify-self: center;
-  align-self: center;
-  max-width: 100%;
-  height: auto;
+.trd4box1 {
+  background-image: url(/pngimages/mouse2.png);
+  background-color: #9c9a9adc;
+  background-position: center;
+  background-size: 100px;
+  background-repeat: no-repeat;
+}
+
+.trd4box2 {
+  background-image: url(/pngimages/keyboard2.png);
+  background-color: #9c9a9adc;
+  background-position: center;
+  background-size: 180px;
+  background-repeat: no-repeat;
+}
+
+.trd4box3 {
+  background-image: url(/pngimages/ram.png);
+  background-color: #9c9a9adc;
+  background-position: center;
+  background-size: 180px;
+  background-repeat: no-repeat;
+}
+
+.trd4box4 {
+  background-image: url(/pngimages/monitor.png);
+  background-color: #9c9a9adc;
+  background-position: center;
+  background-size: 140px;
+  background-repeat: no-repeat;
+}
+
+.small-banners {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  gap: 10rem;
+}
+
+.firstbanner {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 15px;
+ background: linear-gradient(135deg, #4CAF50, #8BC34A, #CDDC39), url(/pngimages/grocstall.png);
+ background-size: cover 250px;
+ background-repeat: no-repeat;
+ background-position: right center;
+ background-blend-mode: multiply;
+ width: 50%;
+  height: 230px;
+}
+
+.firstbanner-link {
+  margin: 40px;
+  margin-bottom: 15px;
+}
+
+.firstbanner-link a {
+  color: #fff;
+  border-radius: 15px;
+  background-color: blueviolet;
+  padding: 18px 15px;
+}
+
+.firstbanner h1 {
+  color: #fff;
+}
+
+.firstbanner h2 {
+  margin: 5px 20px;
+  color: #fff;
+}
+
+.secondbanner {
+  display: flex;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 15px;
+ background: linear-gradient(135deg, #4CAF50, #8BC34A, #CDDC39), url(/pngimages/iphoneused.png);
+ background-size: cover 100px;
+ background-repeat: no-repeat;
+ background-position: right;
+ background-blend-mode: multiply;
+ width: 50%;
+  height: 230px;
+}
+
+.secondbanner-link {
+  margin-top: 100px;
+
+}
+
+.secondbanner-link a {
+  color: #fff;
+  border-radius: 15px;
+  background-color: blueviolet;
+  padding: 18px 15px;
+}
+
+.secondbanner h1 {
+  color: #fff;
+}
+
+.secondbanner h2 {
+  margin: 5px 20px;
+  color: #fff;
 }
 
 .secondmain {
@@ -845,10 +1114,8 @@ ion-icon {
   width: 100%;
 }
 
-main hr {
-  width: 100%;
-  border: 0.5px solid #000;
-  background-color: #000;
+#cat {
+  scroll-margin-top: 60px;
 }
 
 .cathead {
@@ -858,10 +1125,13 @@ main hr {
 .categories {
   width: 90%;
   margin: 0 auto;
-  background-color: #e43535;
   border-radius: var(--BORDER-RADIUS);
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+}
+
+.categories h3 {
+  color: #000;
 }
 
 .categories a {
@@ -879,8 +1149,8 @@ main hr {
 }
 
 .cathead h2 {
-  color: #4b5563;
-  font-size: 40px;
+  color: #000;
+  font-size: 25px;
   font-weight: 700;
   padding-top: 3px;
   font-family: "Poppins", sans-serif;
@@ -898,22 +1168,22 @@ main hr {
 .phones,
 .shoes,
 .watches,
-.sports {
-  margin: 0 auto;
+.sports,
+.kids,
+.health {
+  margin: 0 5px;
   padding: 10px 0;
   display: flex;
   flex-flow: column;
-  font-size: 10px;
-  color: #fff;
   justify-content: center;
   text-align: center;
 }
 
 .tablets a {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   background-image: url(/pngimages/ipad.png);
-  background-color: #fff;
+  background-color: #ebe9e9;
   background-size: cover;
   border-radius: 50%;
   margin: 20px;
@@ -931,10 +1201,10 @@ main hr {
 }
 
 .phones a {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   background-image: url(/pngimages/iphone.png);
-  background-color: #fff;
+  background-color: #ebe9e9;
   background-size: cover;
   border-radius: 50%;
   margin: 20px;
@@ -952,10 +1222,10 @@ main hr {
 }
 
 .shoes a {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   background-image: url(/pngimages/nikes.png);
-  background-color: #fff;
+  background-color: #ebe9e9;
   background-size: cover;
   border-radius: 50%;
   margin: 20px;
@@ -973,10 +1243,10 @@ main hr {
 }
 
 .watches a {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   background-image: url(/pngimages/menswatch2.png);
-  background-color: #fff;
+  background-color: #ebe9e9;
   background-size: cover;
   border-radius: 50%;
   margin: 20px;
@@ -994,10 +1264,10 @@ main hr {
 }
 
 .sports a {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   background-image: url(/pngimages/sportballs.png);
-  background-color: #fff;
+  background-color: #ebe9e9;
   background-size: cover;
   border-radius: 50%;
   margin: 20px;
@@ -1009,6 +1279,276 @@ main hr {
 }
 
 .sports h3 {
+  display: block;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.kids a {
+  width: 200px;
+  height: 200px;
+  background-image: url(/pngimages/toys.png);
+  background-color: #ebe9e9;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.kids a:hover {
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.kids h3 {
+  display: block;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.health a {
+  width: 200px;
+  height: 200px;
+  background-image: url(/pngimages/health.png);
+  background-color: #ebe9e9;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.health a:hover {
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.health h3 {
+  display: block;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.thirdmain {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.thirdmain hr {
+  width: 100%;
+  border: 0.5px solid #000;
+  background-color: #000;
+}
+
+#brands {
+  scroll-margin-top: 70px;
+}
+
+.brandhead {
+  margin: 10px 50px;
+}
+
+.brand-outlets {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: var(--BORDER-RADIUS);
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.brand-outlets h3 {
+  color: #000;
+}
+
+.brand-outlets a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.brand-outlets a:hover {
+  opacity: 0.9;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 2px solid blueviolet;
+  border-radius: 5px;
+}
+
+.brandhead h2 {
+  color: #000;
+  font-size: 25px;
+  font-weight: 700;
+  padding-top: 3px;
+  font-family: "Poppins", sans-serif;
+}
+
+.firstbrandslide {
+  display: flex;
+  flex-grow: 1;
+  padding: 15px;
+  gap: 1rem;
+  justify-content: space-evenly;
+}
+
+.apple,
+.samsung,
+.nike,
+.lg,
+.oraimo,
+.ps,
+.nivea {
+  margin: 0 5px;
+  padding: 10px 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.apple a {
+  width: 200px;
+  height: 200px;
+  background-image: url(/pngimages/applelogo.png);
+  background-color: #ebe9e9;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.apple a:hover {
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.apple h3 {
+  display: block;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.samsung a {
+  width: 200px;
+  height: 200px;
+  background-image: url(/pngimages/samsunglogo.png);
+  background-color: #ebe9e9;
+  background-size: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.samsung a:hover {
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.samsung h3 {
+  display: block;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.nike a {
+  width: 200px;
+  height: 200px;
+  background-image: url(/pngimages/nikelogo.png);
+  background-color: #ebe9e9;
+  background-size: 200px;
+  background-position: center;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.nike a:hover {
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.nike h3 {
+  display: block;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.lg a {
+  width: 200px;
+  height: 200px;
+  background-image: url(/pngimages/lglogo.png);
+  background-color: #ebe9e9;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.lg a:hover {
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.lg h3 {
+  display: block;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.oraimo a {
+  width: 200px;
+  height: 200px;
+  background-image: url(/pngimages/oraimo-seeklogo.png);
+  background-color: #ebe9e9;
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.oraimo a:hover {
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.oraimo h3 {
+  display: block;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.ps a {
+  width: 200px;
+  height: 200px;
+  background-image: url(/pngimages/pslogo.png);
+  background-color: #ebe9e9;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.ps a:hover {
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.ps h3 {
+  display: block;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.nivea a {
+  width: 200px;
+  height: 200px;
+  background-image: url(/pngimages/nivealogo.png);
+  background-color: #ebe9e9;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.nivea a:hover {
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.nivea h3 {
   display: block;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
