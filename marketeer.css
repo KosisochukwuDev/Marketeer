@@ -32,7 +32,7 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #ffffffbe;
+    background-color: #ffffff96;
     padding-top: 20px;
     padding-bottom: 20px;
     top: 0;
@@ -134,7 +134,7 @@ hr {
     margin-bottom: 40px;
 }
 .feat {
-    font-weight: 100;
+    font-weight: 300;
     font-size: 75px;
 }
 .slogan{
@@ -615,4 +615,9 @@ th:last-child{
     display: flex;
     flex-direction: column;
     gap: 70px;
+}
+
+
+@media screen {
+    
 }
