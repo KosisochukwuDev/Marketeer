@@ -60,7 +60,9 @@
             </div>
 
         <div class="nav2">
-            <button class="user" onclick="openSignIn()"><i class="fa fa-user" aria-hidden="true"></i></button>
+            <a class="user" id="userLink">
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </a>
             <div id="signIn">
                 <div class="signInModal">
                     <div class="close" onclick="closeSignIn()">&times;</div>
@@ -71,9 +73,9 @@
                         </div>
                         <p class="formHead">Sign in to your account</p>
                     </div>
-                    <form action="" method="get">
+                    <form action="" method="get" id="signinform">
                         <label for="email">Email</label><br>
-                        <input type="email" class="inputForm" required><br>
+                        <input type="email" class="inputForm" id="signinemail" required><br>
                         <label for="password">Password</label><br>
                         <input type="password" class="inputForm" required><br>
         
@@ -119,7 +121,7 @@
                             </center>
                             <form action="" method="get">
                                 <label for="">Name</label><br>
-                                <input type="text" class="inputForm" required><br>
+                                <input type="text" class="inputForm" id="signupname"><br>
                                 <label for="">Email</label><br>
                                 <input type="email" class="inputForm" required><br>
                                 <label for="">Country</label><br>
@@ -252,6 +254,72 @@
         <a href="">Contact Us</a>
         <p>Copyright &copy; Marketeer, 2025</p>
     </footer>
+
+<script>
+    // Handle sign up
+    document.querySelector("#modalSign form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        let name = document.getElementById("signupname").value;
+        localStorage.setItem("username", name);
+        closeModal(); // stay on homepage
+        location.reload(); // refresh homepage to reflect login
+    });
+
+    // Handle sign in
+    document.querySelector("#signinform").addEventListener("submit", function (e) {
+        e.preventDefault();
+        let email = document.getElementById("signinemail").value;
+        localStorage.setItem("username", email);
+        closeSignIn(); // close modal
+        location.reload();
+    });
+
+    // On load, show username if logged in
+    window.addEventListener("DOMContentLoaded", function () {
+        let user = localStorage.getItem("username");
+        if (user) {
+            document.querySelector(".user").innerHTML = `<i class="fa fa-user"></i> ${user}`;
+        }
+    });
+</script>
+
+
+<script>
+    document.getElementById("signinForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Get name
+        let name = document.getElementById("username").value;
+
+        // Store it in localStorage (persists across pages)
+        localStorage.setItem("username", name);
+
+        // Redirect to account page
+        window.location.href = "account.html";
+    });
+</script>
+
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+        let user = localStorage.getItem("username");
+        let userLink = document.getElementById("userLink");
+
+        if (user) {
+            // Already logged in → link to account page
+            userLink.href = "account.html";
+           userLink.innerHTML = `<i class="fa fa-user"></i>`;
+
+        } else {
+            // Not logged in → open sign-in modal
+            userLink.href = "#";
+            userLink.addEventListener("click", function (e) {
+                e.preventDefault();
+                openSignIn();
+            });
+        }
+    });
+</script>
+
 
     <script src="/Js/marketeer.js"></script>
 

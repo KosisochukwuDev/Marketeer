@@ -53,7 +53,8 @@
                             <h1>Marketeer</h1>
 
                             <a href="#">
-                                <abbr title="back to top"><img src="/previewimages/logo.png" alt="Marketeer.Co" width="40" height="40"></abbr>
+                                <abbr title="back to top"><img src="/previewimages/logo.png" alt="Marketeer.Co"
+                                        width="40" height="40"></abbr>
                             </a>
                     </div>
                     <div class="dropdown-content">
@@ -71,7 +72,7 @@
                     </div>
                 </div>
                 <a href="#cat">Categories</a>
-                <a href="">Brand Outlet</a>
+                <a href="#brands">Brand Outlet</a>
             </span>
 
             <div class="search-container">
@@ -82,7 +83,9 @@
             </div>
 
             <div class="nav2">
-                <button class="user" onclick="openSignIn()"><i class="fa fa-user" aria-hidden="true"></i></button>
+                <a class="user" id="userLink">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </a>
                 <div id="signIn">
                     <div class="signInModal">
                         <div class="close" onclick="closeSignIn()">&times;</div>
@@ -93,18 +96,18 @@
                             </div>
                             <p class="formHead">Sign in to your account</p>
                         </div>
-                        <form action="" method="get">
+                        <form action="" method="get" id="signinform">
                             <label for="email">Email</label><br>
                             <input type="email" class="inputForm" required><br>
                             <label for="password">Password</label><br>
                             <input type="password" class="inputForm" required><br>
-            
+
                             <div class="inputsigninBtns">
                                 <button type="submit" class="inputsigninBtn">Sign In</button>
                                 <button type="reset" class="inputsigninBtn">Forgot Password</button>
                             </div>
                         </form>
-            
+
                         <div class="othersigninoptions">
                             <a href="">Sign In with Google<i class="fa fa-google"></i></a>
                             <a href="">Sign In with Facebook <i class="fa fa-facebook"></i></a>
@@ -261,21 +264,17 @@
                             <div class="trend1cont">
 
                                 <div class="trend1header">
-                                    <h2>welcome</h2>
+                                    <h2>Gaming</h2>
                                 </div>
 
                                 <div class="trend1">
                                     <div class="trd1box1">
-                                        <img src="/pngimages/ps5contr.png" alt="" width="120">
                                     </div>
                                     <div class="trd1box2">
-                                        <img src="/pngimages/xboxcontr.png" alt="" width="120">
                                     </div>
                                     <div class="trd1box3">
-                                        <img src="/pngimages/bo6game.png" alt="" width="87">
                                     </div>
                                     <div class="trd1box4">
-                                        <img src="/pngimages/gamingpc.png" alt="" width="100">
                                     </div>
 
                                 </div>
@@ -284,42 +283,34 @@
                             <div class="trend2cont">
 
                                 <div class="trend2header">
-                                    <h2>welcome</h2>
+                                    <h2>Women</h2>
                                 </div>
 
                                 <div class="trend2">
                                     <div class="trd2box1">
-                                        <img src="/pngimages/womensbags.png" alt="" width="150">
                                     </div>
                                     <div class="trd2box2">
-                                        <img src="/pngimages/womesaccess.png" alt="" width="110">
                                     </div>
                                     <div class="trd2box3">
-                                        <img src="/pngimages/necklace.png" alt="" width="100">
                                     </div>
                                     <div class="trd2box4">
-                                        <img src="/pngimages/bracelet.png" alt="" width="100">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="trend3cont">
                                 <div class="trend3header">
-                                    <h2>welcome</h2>
+                                    <h2>Mens Wears</h2>
                                 </div>
 
                                 <div class="trend3">
                                     <div class="trd3box1">
-                                        <img src="/pngimages/mensshirts.png" alt="" width="150">
                                     </div>
                                     <div class="trd3box2">
-                                        <img src="/pngimages/mensring.png" alt="" width="100">
                                     </div>
                                     <div class="trd3box3">
-                                        <img src="/pngimages/menswatch1.png" alt="" width="100">
                                     </div>
                                     <div class="trd3box4">
-                                        <img src="/pngimages/yellowshoes.png" alt="" width="120">
                                     </div>
                                 </div>
                             </div>
@@ -327,7 +318,7 @@
                             <div class="trend4cont">
 
                                 <div class="trend4header">
-                                    <h2>welcome</h2>
+                                    <h2>Tech</h2>
                                 </div>
                                 <div class="trend4">
                                     <div class="trd4box1"></div>
@@ -349,43 +340,43 @@
 
 
             <script>
-    let currentSlide = 1;
-    const totalSlides = 3; // you have slide1, slide2, slide3
-    const dots = document.querySelectorAll(".slidernav .dot");
+                let currentSlide = 1;
+                const totalSlides = 3; // you have slide1, slide2, slide3
+                const dots = document.querySelectorAll(".slidernav .dot");
 
-    function goToSlide(n) {
-        const container = document.querySelector(".slider");
-        const slide = document.getElementById("slide" + n);
+                function goToSlide(n) {
+                    const container = document.querySelector(".slider");
+                    const slide = document.getElementById("slide" + n);
 
-        container.scrollTo({
-            left: slide.offsetLeft,
-            behavior: "smooth"
-        });
+                    container.scrollTo({
+                        left: slide.offsetLeft,
+                        behavior: "smooth"
+                    });
 
-        // update dots
-        dots.forEach(dot => dot.classList.remove("active"));
-        dots[n - 1].classList.add("active");
+                    // update dots
+                    dots.forEach(dot => dot.classList.remove("active"));
+                    dots[n - 1].classList.add("active");
 
-        currentSlide = n; // keep track if clicked manually
-    }
+                    currentSlide = n; // keep track if clicked manually
+                }
 
-    // Auto-scroll function
-    function autoScroll() {
-        goToSlide(currentSlide);
-        currentSlide++;
-        if (currentSlide > totalSlides) {
-            currentSlide = 1; // loop back
-        }
-    }
+                // Auto-scroll function
+                function autoScroll() {
+                    goToSlide(currentSlide);
+                    currentSlide++;
+                    if (currentSlide > totalSlides) {
+                        currentSlide = 1; // loop back
+                    }
+                }
 
-    // Run autoScroll every 5 seconds
-    setInterval(autoScroll, 5000);
+                // Run autoScroll every 5 seconds
+                setInterval(autoScroll, 5000);
 
-    // Initialize first dot as active
-    goToSlide(1);
-</script>
+                // Initialize first dot as active
+                goToSlide(1);
+            </script>
 
-           <!-- <script>
+            <!-- <script>
                 function goToSlide(n) {
                     const container = document.querySelector(".slider");   // your slider wrapper
                     const slide = document.getElementById("slide" + n);
@@ -425,9 +416,37 @@
 
         </div>
 
-        <section class="secondmain" id="cat">
+        <section>
+            <div class="small-banners">
+                <div class="firstbanner">
+                    <div class="firstbanner-text">
+                        <h1>Marketeer Stays Fresh, And Local</h1>
+                        <h2>Get fresh produce from stalls near you</h2>
+                        <h2>Delivered right To Your Doorstep</h2>
+                    </div>
 
-            <hr>
+                    <div class="firstbanner-link">
+                        <a href="">Shop Fresh!!!</a>
+                    </div>
+                </div>
+
+                <div class="secondbanner">
+                    <div class="secondbanner-text">
+                        <h1>If It Ain't Broke, Don't Bin It</h1>
+                        <h2>Buy And Sell Used Devices On Marketeer</h2>
+                        <h2>Marketeer Ensures you trade safely</h2>
+                        <h2>Think Green, Recycle <i class="fa fa-recycle"></i></h2>
+                    </div>
+                
+                    <div class="secondbanner-link">
+                        <a href="">Buy</a>
+                        <a href="">Sell</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secondmain" id="cat">
             <div class="cathead">
                 <h2>Shop By Categories</h2>
             </div>
@@ -467,10 +486,85 @@
                         <h3>SPORTS</h3>
 
                     </div>
+
+                    <div class="kids">
+                        <a href=""></a>
+                        <h3>kids</h3>
+                    </div>
+
+                    <div class="health">
+                        <a href=""></a>
+                        <h3>Health and Beauty</h3>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <section class="thirdmain" id="brands">
+            <div class="brandhead">
+                <h2>Brand Outlets</h2>
+            </div>
+
+            <div class="brand-outlets">
+                <div class="firstbrandslide">
+
+                    <div class="apple">
+
+                        <a href=""></a>
+
+                        <h3>Apple</h3>
+                    </div>
+
+                    <div class="samsung">
+
+                        <a href=""></a>
+
+                        <h3>Samsung</h3>
+
+                    </div>
+
+                    <div class="nike">
+                        <a href=""></a>
+                        <h3>Nike</h3>
+
+                    </div>
+
+                    <div class="lg">
+                        <a href=""></a>
+                        <h3>LG</h3>
+
+                    </div>
+
+                    <div class="oraimo">
+                        <a href=""></a>
+                        <h3>Oraimo</h3>
+
+                    </div>
+
+                    <div class="ps">
+                        <a href=""></a>
+                        <h3>PlayStation</h3>
+                    </div>
+
+                    <div class="nivea">
+                        <a href=""></a>
+                        <h3>Nivea</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="techtoboter">
+            <h1>TECH-TOBOTER IS RIGHT AROUND THE CORNER</h1>
+
+            <div class="techbox">
+
+            </div>
+
+        </section>
 
         <section class="workout">
 
@@ -516,58 +610,64 @@
             </div>
         </section>
 
-        <section class="techtoboter">
-            <h1>TECH-TOBOTER IS RIGHT AROUND THE CORNER</h1>
-
-            <div class="techbox">
-
-            </div>
-
-        </section>
-
 
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis porro ut a voluptatem recusandae impedit
-        similique, quo quasi natus esse odio quaerat ducimus dolorem asperiores voluptas incidunt quos cum dolore!
-        Corrupti cupiditate asperiores numquam quod fugiat, vel delectus, sint ad perferendis dolorem ullam non
-        laboriosam eveniet mollitia explicabo maxime laborum exercitationem assumenda quos a minus quaerat praesentium,
-        molestiae rerum? Officiis?
-        Quasi libero maxime nostrum temporibus, iusto officiis hic corrupti eveniet ducimus nobis laboriosam ex
-        doloribus. Magni ipsum voluptate odio similique blanditiis incidunt quae molestias architecto alias voluptatum
-        iste, inventore tempore.
-        Sequi suscipit inventore dolore quam qui ratione veniam consequatur quos nam! Commodi asperiores ducimus a eum
-        facilis, error nulla aperiam tempora perferendis, ipsum accusantium non quibusdam. Quis cupiditate eaque
-        mollitia.
-        Delectus ab accusamus natus sunt in vel. Fuga distinctio consectetur in exercitationem quam, voluptas unde
-        provident enim cumque tempora aspernatur. Ab alias a dignissimos odit nobis quo earum illum cum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam, aliquam molestiae error blanditiis,
-        aut amet dicta vel exercitationem deserunt tempora nam natus, odio reiciendis inventore? Nostrum odit dolores
-        nisi.
-        Sit delectus magni minus sequi. Enim, quaerat sint pariatur, nostrum vero eveniet earum animi deleniti dicta
-        assumenda distinctio voluptatum! Modi libero ipsa tempora minus similique laudantium facilis vero asperiores?
-        Earum.
-        Distinctio, fuga. Repudiandae ipsum quaerat aperiam voluptatibus saepe soluta nesciunt facilis, quo nostrum
-        accusamus consequuntur vel repellendus labore eveniet nam reprehenderit ipsam ex at quidem corporis repellat
-        vero! Vero, atque.
-        Ea facere laudantium, esse hic voluptas natus, vitae molestiae qui, quisquam voluptatibus fugit necessitatibus
-        unde reiciendis libero. Neque sit, odit dignissimos nam impedit omnis doloribus debitis voluptatibus, distinctio
-        maxime cum?
-        Molestiae neque eveniet animi error, nostrum quas eos iste! Iure expedita et non quasi rerum corporis
-        repudiandae culpa est unde deserunt, quos voluptatibus atque eligendi, provident quisquam impedit dicta maiores.
-        Quaerat veniam, nulla itaque neque harum velit? Odit itaque quisquam officiis asperiores rerum ipsa soluta
-        impedit, facilis qui quis sapiente, cumque officia commodi nostrum, accusantium assumenda quia totam molestiae
-        dignissimos?
-        Hic ex minima molestias mollitia voluptatem sed recusandae non, nihil perferendis magnam eligendi nesciunt
-        laboriosam iusto tempore impedit dolores modi dicta! Debitis molestiae neque asperiores suscipit modi laudantium
-        aut quasi!
-        Recusandae quam eos vero possimus suscipit numquam quasi voluptatibus nobis itaque exercitationem fugiat maiores
-        blanditiis, fuga ipsam hic dolorum obcaecati at, cupiditate asperiores ex vel. Voluptas fugit id incidunt
-        officiis.
-        Repellendus, pariatur voluptas. Iusto, quisquam aperiam doloremque voluptas beatae exercitationem ad corrupti
-        hic vel dolorem quidem ducimus cupiditate eum sunt at animi fugiat quo aspernatur nihil deserunt labore
-        quibusdam sint!
-        Blanditiis facilis, nam architecto harum, dolores aliquid consectetur quae distinctio cupiditate minus maxime
-        ipsum eaque nesciunt deleniti magni quidem! Delectus alias ad cum voluptas sapiente eveniet id deserunt minima
-        harum!</p>
+            similique, quo quasi natus esse odio quaerat ducimus dolorem asperiores voluptas incidunt quos cum dolore!
+            Corrupti cupiditate asperiores numquam quod fugiat, vel delectus, sint ad perferendis dolorem ullam non
+            laboriosam eveniet mollitia explicabo maxime laborum exercitationem assumenda quos a minus quaerat
+            praesentium,
+            molestiae rerum? Officiis?
+            Quasi libero maxime nostrum temporibus, iusto officiis hic corrupti eveniet ducimus nobis laboriosam ex
+            doloribus. Magni ipsum voluptate odio similique blanditiis incidunt quae molestias architecto alias
+            voluptatum
+            iste, inventore tempore.
+            Sequi suscipit inventore dolore quam qui ratione veniam consequatur quos nam! Commodi asperiores ducimus a
+            eum
+            facilis, error nulla aperiam tempora perferendis, ipsum accusantium non quibusdam. Quis cupiditate eaque
+            mollitia.
+            Delectus ab accusamus natus sunt in vel. Fuga distinctio consectetur in exercitationem quam, voluptas unde
+            provident enim cumque tempora aspernatur. Ab alias a dignissimos odit nobis quo earum illum cum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam, aliquam molestiae error
+            blanditiis,
+            aut amet dicta vel exercitationem deserunt tempora nam natus, odio reiciendis inventore? Nostrum odit
+            dolores
+            nisi.
+            Sit delectus magni minus sequi. Enim, quaerat sint pariatur, nostrum vero eveniet earum animi deleniti dicta
+            assumenda distinctio voluptatum! Modi libero ipsa tempora minus similique laudantium facilis vero
+            asperiores?
+            Earum.
+            Distinctio, fuga. Repudiandae ipsum quaerat aperiam voluptatibus saepe soluta nesciunt facilis, quo nostrum
+            accusamus consequuntur vel repellendus labore eveniet nam reprehenderit ipsam ex at quidem corporis repellat
+            vero! Vero, atque.
+            Ea facere laudantium, esse hic voluptas natus, vitae molestiae qui, quisquam voluptatibus fugit
+            necessitatibus
+            unde reiciendis libero. Neque sit, odit dignissimos nam impedit omnis doloribus debitis voluptatibus,
+            distinctio
+            maxime cum?
+            Molestiae neque eveniet animi error, nostrum quas eos iste! Iure expedita et non quasi rerum corporis
+            repudiandae culpa est unde deserunt, quos voluptatibus atque eligendi, provident quisquam impedit dicta
+            maiores.
+            Quaerat veniam, nulla itaque neque harum velit? Odit itaque quisquam officiis asperiores rerum ipsa soluta
+            impedit, facilis qui quis sapiente, cumque officia commodi nostrum, accusantium assumenda quia totam
+            molestiae
+            dignissimos?
+            Hic ex minima molestias mollitia voluptatem sed recusandae non, nihil perferendis magnam eligendi nesciunt
+            laboriosam iusto tempore impedit dolores modi dicta! Debitis molestiae neque asperiores suscipit modi
+            laudantium
+            aut quasi!
+            Recusandae quam eos vero possimus suscipit numquam quasi voluptatibus nobis itaque exercitationem fugiat
+            maiores
+            blanditiis, fuga ipsam hic dolorum obcaecati at, cupiditate asperiores ex vel. Voluptas fugit id incidunt
+            officiis.
+            Repellendus, pariatur voluptas. Iusto, quisquam aperiam doloremque voluptas beatae exercitationem ad
+            corrupti
+            hic vel dolorem quidem ducimus cupiditate eum sunt at animi fugiat quo aspernatur nihil deserunt labore
+            quibusdam sint!
+            Blanditiis facilis, nam architecto harum, dolores aliquid consectetur quae distinctio cupiditate minus
+            maxime
+            ipsum eaque nesciunt deleniti magni quidem! Delectus alias ad cum voluptas sapiente eveniet id deserunt
+            minima
+            harum!</p>
 
     </main>
 
@@ -577,6 +677,38 @@
             <figcaption>Our Whatsapp Contact</figcaption>
         </figure>
     </footer>-->
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            let user = localStorage.getItem("username");
+            if (user) {
+                document.querySelector(".user").innerHTML = `<i class="fa fa-user"></i> ${user}`;
+            }
+        });
+    </script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            let user = localStorage.getItem("username");
+            let userLink = document.getElementById("userLink");
+
+            if (user) {
+                // Already logged in → link to account page
+                userLink.href = "account.html";
+                userLink.innerHTML = `<i class="fa fa-user"></i>`;
+
+            } else {
+                // Not logged in → open sign-in modal
+                userLink.href = "#";
+                userLink.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    openSignIn();
+                });
+            }
+        });
+    </script>
+
+
     <script src="/Js/marketeer.js"></script>
 </body>
 

@@ -32,7 +32,6 @@ button {
 }
 
 html {
-  
   margin: 0;
   scroll-behavior: smooth;
 }
@@ -41,7 +40,7 @@ body {
   margin: 0 auto;
   font-family: "Poppins", sans-serif;
   min-width: 100%;
-  
+
   /* background-color: aquamarine;*/
   /*min-height: 100vh;*/
   /*background-repeat: no-repeat;*/
@@ -111,7 +110,8 @@ nav a {
 }
 
 .nav2 i {
-  font-size: 40px;
+  color: rgb(66, 23, 106);
+  font-size: 30px;
 }
 
 .dropdown {
@@ -292,8 +292,8 @@ nav a {
 }
 
 .othersigninoptions i {
-  font-size: 25px;
-  margin-left: 5px;
+  font-size: 20px;
+  margin-left: 3px;
 }
 
 .head-pic {
@@ -354,7 +354,7 @@ h3 .h3frt {
 }
 
 .profile-box-name h3 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 1000;
   white-space: nowrap;
 }
@@ -414,11 +414,11 @@ h3 .h3frt {
 }
 
 .profile-controls-footer a {
-    color: rgb(253, 186, 186);
+  color: rgb(253, 186, 186);
 }
 
 .logout a:hover {
-    color: red;
+  color: red;
 }
 
 .banner {
