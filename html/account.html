@@ -6,7 +6,7 @@
     <meta name="author" content="Patrick and Kosi">
     <meta name="description" content="Marketeer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/preview images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/previewimages/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/styles/category.css">
     <link rel="stylesheet" href="/styles/marketeer.css">
     <link rel="stylesheet" href="/styles/myaccnt.css">
@@ -25,17 +25,15 @@
 
     <header>
         <nav>
-            <div class="mainnav">
-
+            <span class="mainnav">
                 <div class="dropdown">
-
                     <div class="head-pic">
                         <a href="/html/marketeer.html">
                             <h1>Marketeer</h1>
-
+        
                             <a href="#">
-                                <abbr title="back to top"><img src="/previewimages/logo.png" alt="Marketeer.Co"
-                                        width="40" height="40"></abbr>
+                                <abbr title="back to top"><img src="/previewimages/logo.png" alt="Marketeer.Co" width="40"
+                                        height="40"></abbr>
                             </a>
                     </div>
                     <div class="dropdown-content">
@@ -45,27 +43,29 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="/html/categories.html">Store</a>
+                    <a href="">Store</a>
                     <div class="dropdown-content">
                         <a href="">Recommended for you</a>
                         <a href=""> Our Partners</a>
                         <a href=""></a>
                     </div>
                 </div>
-                <a href="/html/categories.html#cat">Categories</a>
-                <a href="">Brand Outlet</a>
-            </div>
-
+                <a href="#cat">Categories</a>
+                <a href="#brands">Brand Outlet</a>
+            </span>
+        
             <div class="search-container">
                 <input type="search" name="search" placeholder="Search" id="searchbar">
                 <button id="search-button">
                     <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
             </div>
-
+        
             <div class="nav2">
-                <button class="user" onclick="openSignIn()"><abbr title="favorites"><i class="fa fa-heart" aria-hidden="true"></i></abbr></button>
-              <!--  <div id="signIn">
+                <a class="user" id="userLink">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </a>
+                <div id="signIn">
                     <div class="signInModal">
                         <div class="close" onclick="closeSignIn()">&times;</div>
                         <div class="signInModal-head">
@@ -75,18 +75,18 @@
                             </div>
                             <p class="formHead">Sign in to your account</p>
                         </div>
-                        <form action="" method="get">
+                        <form action="" method="get" id="signinform">
                             <label for="email">Email</label><br>
                             <input type="email" class="inputForm" required><br>
                             <label for="password">Password</label><br>
                             <input type="password" class="inputForm" required><br>
-
+        
                             <div class="inputsigninBtns">
                                 <button type="submit" class="inputsigninBtn">Sign In</button>
                                 <button type="reset" class="inputsigninBtn">Forgot Password</button>
                             </div>
                         </form>
-
+        
                         <div class="othersigninoptions">
                             <a href="">Sign In with Google<i class="fa fa-google"></i></a>
                             <a href="">Sign In with Facebook <i class="fa fa-facebook"></i></a>
@@ -94,10 +94,8 @@
                             <a href="">Sign In As Guest <i class="fa fa-user"></i></a>
                         </div>
                     </div>
-                </div>-->
-                <a href="/html/cart.html"><abbr title="messages"><i class="fa fa-envelope" aria-hidden="true"></i></abbr></a>
-
-                <a href=""><abbr title="contact us"><i class="fa fa-question-circle"></i></abbr></a>
+                </div>
+                <a href="/html/cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
             </div>
         </nav>
     </header>

@@ -318,7 +318,8 @@ nav a {
 }
 
 .profile {
-  min-width: 100%;
+  width: 75%;
+  margin: 0 auto;
   display: flex;
 }
 
@@ -354,6 +355,7 @@ h3 .h3frt {
 }
 
 .profile-box-name h3 {
+  margin-right: 20px;
   font-size: 30px;
   font-weight: 1000;
   white-space: nowrap;
@@ -385,14 +387,14 @@ h3 .h3frt {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  gap: 5rem;
+  gap: 4.5rem;
 }
 
 .sidebar-bottom a {
   width: 60%;
-  border: 1px solid blueviolet;
-  background-color: blueviolet;
-  border-radius: 25px;
+  border: 1px solid rgb(40, 40, 211);
+  background-color: rgb(40, 40, 211);
+  border-radius: 10px;
   text-decoration: none;
   color: aliceblue;
   padding: 15px 5px;
@@ -432,7 +434,7 @@ h3 .h3frt {
   background-repeat: no-repeat;
   background-position: left, 90%;
   background-size: 400px 350px;
-  background-color: rgba(171, 46, 188, 0.354);
+  background-color: rgb(134, 134, 240);
 }
 
 .banner-left h1 {
@@ -453,26 +455,27 @@ h3 .h3frt {
 
 .overview-interact-links {
   margin-top: 20px;
+  margin-left: 20px;
   display: flex;
 }
 
 .overview-interact-links a {
+  width: 200px;
   margin: 0 10px;
   margin-bottom: 3px;
   color: #fff;
-  background-color: rgba(137, 43, 226, 0.554);
+  background-color: rgb(40, 40, 211);
   padding: 10px 10px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .overview-interact {
   margin: 0px auto;
+  margin-left: 27px;
   width: 100%;
-  height: 635px;
-  border-top: 1px solid rgb(22, 4, 39);
-  border-left: 1px solid rgb(22, 4, 39);
+  height: 645px;
+  border: 1px solid rgb(22, 4, 39);
   border-radius: 10px;
-  border-bottom-left-radius: 0px;
 }
 
 footer {

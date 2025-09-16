@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   margin: 0;
@@ -405,7 +405,7 @@ input {
 .mainpanel {
   margin: 81px auto;
   position: relative;
-  max-width: 95%;
+  max-width: 75%;
 }
 
 .slider {
@@ -527,9 +527,9 @@ input {
 
 .cnt1 h2 {
   color: #fff;
-  font-weight: 950;
-  font-size: 50px;
-  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
 }
 
 .cnt1 h5 {
@@ -579,9 +579,9 @@ input {
 
 .cnt2 h2 {
   color: #fff;
-  font-weight: 950;
-  font-size: 50px;
-  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
 }
 
 .cnt2 h5 {
@@ -589,7 +589,7 @@ input {
   font-size: 20px;
   font-weight: 800;
   padding: 0px 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .cnt2 a {
@@ -644,16 +644,16 @@ h5 {
 }*/
 
 .cnt3-1 h2 {
-  font-weight: 950;
-  font-size: 50px;
-  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
 }
 
 .cnt3-1 h5 {
   font-weight: 800;
   font-size: 20px;
   padding: 10px 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .shrb {
@@ -681,6 +681,7 @@ h5 {
 }
 
 ion-icon {
+  font-size: 35px;
   display: block;
 }
 
@@ -729,8 +730,8 @@ ion-icon {
 }
 
 .trend {
-  margin: 0px auto;
-  width: 98%;
+  margin: 0 auto;
+  width: 95%;
   display: flex;
   flex-flow: column;
   /*border: 1px solid #000;*/
@@ -745,7 +746,7 @@ ion-icon {
   text-align: center;
   color: #fff;
   margin-bottom: 5px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .trendbox {
@@ -768,7 +769,7 @@ ion-icon {
 
 .trend1header h2 {
   text-align: start;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
   color: #fff;
 }
 
@@ -783,7 +784,7 @@ ion-icon {
 .trd1box3,
 .trd1box4 {
   margin: 0px auto;
-  width: 160px;
+  width: 150px;
   height: 125px;
   justify-content: center;
   border-radius: 10px;
@@ -838,7 +839,7 @@ ion-icon {
 .trend2header h2 {
   text-align: start;
   color: #8d0909;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .trend2 {
@@ -852,7 +853,7 @@ ion-icon {
 .trd2box3,
 .trd2box4 {
  margin: 0 auto;
-  width: 160px;
+  width: 150px;
   height: 125px;
   background-color: #b3719a;
   justify-content: center;
@@ -908,7 +909,7 @@ ion-icon {
 .trend3header h2 {
   text-align: start;
   color: #ffffff;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .trend3 {
@@ -922,7 +923,7 @@ ion-icon {
 .trd3box3,
 .trd3box4 {
  margin: 0 auto;
-   width: 160px;
+   width: 150px;
   height: 125px;
   background-color: #973b3b;
   justify-content: center;
@@ -978,7 +979,7 @@ ion-icon {
 .trend4header h2 {
   text-align: start;
   color: red;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .trend4 {
@@ -992,7 +993,7 @@ ion-icon {
 .trd4box3,
 .trd4box4 {
  margin: 0 auto;
-   width: 160px;
+   width: 150px;
   height: 125px;
   background-color: #835858dc;
   justify-content: center;
@@ -1035,7 +1036,7 @@ ion-icon {
 
 .small-banners {
   margin: 0 auto;
-  width: 90%;
+  width: 77%;
   display: flex;
   gap: 10rem;
 }
@@ -1079,7 +1080,7 @@ ion-icon {
   margin: 5px;
   padding: 10px;
   border-radius: 15px;
- background: linear-gradient(135deg, #4CAF50, #8BC34A, #CDDC39), url(/pngimages/iphoneused.png);
+ background: linear-gradient(135deg, whitesmoke, blueviolet), url(/pngimages/iphoneused.png);
  background-size: cover 100px;
  background-repeat: no-repeat;
  background-position: right;
@@ -1089,19 +1090,26 @@ ion-icon {
 }
 
 .secondbanner-link {
-  margin-top: 100px;
+  display: flex;
+  flex-flow: column;
+  margin-top: 30px;
+  width: 20%;
+  gap: 1rem;
 
 }
 
 .secondbanner-link a {
   color: #fff;
-  border-radius: 15px;
-  background-color: blueviolet;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: rgb(40, 40, 211);
   padding: 18px 15px;
+  justify-content: center;
+  text-align: center;
 }
 
 .secondbanner h1 {
-  color: #fff;
+  color: #000;
 }
 
 .secondbanner h2 {
@@ -1111,7 +1119,7 @@ ion-icon {
 
 .secondmain {
   margin: 0 auto;
-  width: 100%;
+  width: 80%;
 }
 
 #cat {
@@ -1123,11 +1131,8 @@ ion-icon {
 }
 
 .categories {
-  width: 90%;
-  margin: 0 auto;
+  width: 80%;
   border-radius: var(--BORDER-RADIUS);
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
 }
 
 .categories h3 {
@@ -1153,7 +1158,7 @@ ion-icon {
   font-size: 25px;
   font-weight: 700;
   padding-top: 3px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .firstcatslide {
@@ -1180,8 +1185,8 @@ ion-icon {
 }
 
 .tablets a {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-image: url(/pngimages/ipad.png);
   background-color: #ebe9e9;
   background-size: cover;
@@ -1197,12 +1202,12 @@ ion-icon {
 .tablets h3 {
   display: block;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .phones a {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-image: url(/pngimages/iphone.png);
   background-color: #ebe9e9;
   background-size: cover;
@@ -1218,15 +1223,16 @@ ion-icon {
 .phones h3 {
   display: block;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .shoes a {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-image: url(/pngimages/nikes.png);
   background-color: #ebe9e9;
   background-size: cover;
+  background-position: center;
   border-radius: 50%;
   margin: 20px;
 }
@@ -1239,12 +1245,12 @@ ion-icon {
 .shoes h3 {
   display: block;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .watches a {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-image: url(/pngimages/menswatch2.png);
   background-color: #ebe9e9;
   background-size: cover;
@@ -1260,12 +1266,12 @@ ion-icon {
 .watches h3 {
   display: block;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .sports a {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-image: url(/pngimages/sportballs.png);
   background-color: #ebe9e9;
   background-size: cover;
@@ -1281,15 +1287,17 @@ ion-icon {
 .sports h3 {
   display: block;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .kids a {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-image: url(/pngimages/toys.png);
   background-color: #ebe9e9;
-  background-size: cover;
+  background-size: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 50%;
   margin: 20px;
 }
@@ -1302,12 +1310,12 @@ ion-icon {
 .kids h3 {
   display: block;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .health a {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-image: url(/pngimages/health.png);
   background-color: #ebe9e9;
   background-size: cover;
@@ -1323,12 +1331,12 @@ ion-icon {
 .health h3 {
   display: block;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .thirdmain {
   margin: 0 auto;
-  width: 100%;
+  width: 80%;
 }
 
 .thirdmain hr {
@@ -1346,11 +1354,8 @@ ion-icon {
 }
 
 .brand-outlets {
-  width: 90%;
-  margin: 0 auto;
+  width: 80%;
   border-radius: var(--BORDER-RADIUS);
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
 }
 
 .brand-outlets h3 {
@@ -1376,7 +1381,7 @@ ion-icon {
   font-size: 25px;
   font-weight: 700;
   padding-top: 3px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .firstbrandslide {
@@ -1403,8 +1408,8 @@ ion-icon {
 }
 
 .apple a {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-image: url(/pngimages/applelogo.png);
   background-color: #ebe9e9;
   background-size: cover;
@@ -1420,15 +1425,15 @@ ion-icon {
 .apple h3 {
   display: block;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .samsung a {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-image: url(/pngimages/samsunglogo.png);
   background-color: #ebe9e9;
-  background-size: 200px;
+  background-size: 170px;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -1443,15 +1448,15 @@ ion-icon {
 .samsung h3 {
   display: block;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .nike a {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-image: url(/pngimages/nikelogo.png);
   background-color: #ebe9e9;
-  background-size: 200px;
+  background-size: 160px;
   background-position: center;
   border-radius: 50%;
   margin: 20px;
@@ -1465,12 +1470,12 @@ ion-icon {
 .nike h3 {
   display: block;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .lg a {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-image: url(/pngimages/lglogo.png);
   background-color: #ebe9e9;
   background-size: cover;
@@ -1486,15 +1491,15 @@ ion-icon {
 .lg h3 {
   display: block;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .oraimo a {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-image: url(/pngimages/oraimo-seeklogo.png);
   background-color: #ebe9e9;
-  background-size: 200px;
+  background-size: 160px;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
@@ -1509,15 +1514,17 @@ ion-icon {
 .oraimo h3 {
   display: block;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .ps a {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-image: url(/pngimages/pslogo.png);
   background-color: #ebe9e9;
-  background-size: cover;
+  background-size: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 50%;
   margin: 20px;
 }
@@ -1530,12 +1537,12 @@ ion-icon {
 .ps h3 {
   display: block;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .nivea a {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-image: url(/pngimages/nivealogo.png);
   background-color: #ebe9e9;
   background-size: cover;
@@ -1551,10 +1558,12 @@ ion-icon {
 .nivea h3 {
   display: block;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .workout {
+  width: 80%;
+  height: 350px;
   display: flex;
   margin: 40px auto;
   background-color: #202020;
@@ -1577,13 +1586,18 @@ ion-icon {
 }
 
 .femalemodel img {
-  width: 550px;
-  height: 100%;
+  width: 230px;
+  height: 350px;
 }
 
 .malemodel {
   background-color: #ec4899;
   border-radius: 10px;
+}
+
+.malemodel img {
+  width: 250px;
+  height: 340px;
 }
 
 .sportstuff {
@@ -1596,23 +1610,23 @@ ion-icon {
   color: red;
   font-size: 50px;
   font-weight: 800;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
   white-space: nowrap;
 }
 
 .interact {
-  margin: 50px 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  margin: 0px;
+  display: flex;
   background-color: #000;
   border-radius: 15px;
   gap: 0.5rem;
   padding: 10px;
+  justify-content: flex-end;
 }
 
 .sportstuff img {
-  width: 300px;
-  height: 280px;
+  width: 130px;
+  height: 130px;
 }
 
 .bball,
@@ -1624,6 +1638,6 @@ ion-icon {
 }
 
 .workoutmodel img {
-  margin: 0 30px;
-  width: 220px;
+  margin: 0;
+  width: 130px;
 }
